@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <title>Site Web Professionnel</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    color: #007bff;
+   padding: 0px 0px;
+    position: fixed;
+    top: 0;
+   width: 100%;
+   height: 25%;
+    z-index: 2000;
+    border-radius: 50px;
+    border: 5px solid #007bff;
+    box-shadow: 3px 3px 3px 3px #0072c6;
+}
+/* .textContainer .phrases {
+color: #0072c6;
+} */
+
+.navbar .logo {
+    display: flex;
+}
+.navbar img {
+    height: 150px;
+    width: 150px;
+    padding-left: 10%;
+    padding-top: 0%;
+}
+
+.opening-hours {
+    margin-right: 20px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.menu {
+    display: flex; 
+    justify-content: space-around;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.menu-item {
+    position: relative;
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.menu-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+.sub-list {
+    display: none;
+   position: absolute;
+    background-color: #d2d1d1;
+    box-shadow: 0 2px 5px #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+.menu-item:hover .sub-list {
+    display: block; 
+}
+.sub-item {
+    padding: 5px 10px;
+    color: #007bff;
+    text-decoration: none; 
+    display: block; 
+}
+.sub-item:hover {
+    background-color: #e9ecef; 
+}
+.slider {
+    margin-top: 10%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides {
+   display: flex;
+   transition: 0.5s ease;
+    width: 100%;
+}
+
+.slide {
+    width: 100%;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    color: #0072c6; 
+}
+h2 {
+    color: #0072c6; 
+    margin-top: 20px;
+}
+p {
+    line-height: 1.6;
+   text-align: justify;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+.services, .trainings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service, .training {
+    padding: 10px;
+    margin: 2px;
+    width: calc(30% - 40px);
+}
+.container {
+    max-width: 30%;
+    padding: 20px;
+    background-color: white;
+    align-items: center;
+  
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+label {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border: none;
+    text-align: center;
+   color: #0072c6;
+}
+textarea, input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #fefefe;
+    box-shadow: 0 2px 5px #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+button {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #007bff;
+    box-shadow: 0 2px 5px #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    border: none;
+}
+button:hover {
+    background-color: #19d235;
+}
+.contact-options {
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+option{
+    background-color: #d2d1d1;
+    box-shadow: 0 2px 5px #007bff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.contact-option {
+    display: flex;
+    align-items: center;
+    
+}
+
+h3{
+    color: hsl(205, 97%, 48%);
+}
+
+footer {
+text-align: center;
+    background-color:#0072c6;
+    color: #ffffff;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100% 100% 0% 0%;
+    border: 5px solid #ffffff;
+    box-shadow: 3px 0px 0px 3px #0072c6;
+    display: block;
+}
+.maps p {
+    text-align: center;
+}
+.maps a {
+text-decoration: none;
+color: hsl(119, 98%, 49%);
+
+}
+.left {
+padding-right: 60%;
+padding-top: 5%;
+}
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    gap: 20px; 
+    padding-left: 60%;
+    display: inline-flex;
+  
+}
+.social-links a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 90%;
+    transition: background-color 0.3s;
+    width: 40px; 
+    height: 40px;
+    justify-content: center;
+}
+.facebook { background-color: rgb(241, 247, 250); }
+.instagram { background-color: #e1306c; }
+.linkedin { background-color: rgb(241, 247, 250); }
+.email { background-color: #0aa9ff; 
+    text-decoration: none;
+    color: white;
+}
+.social-links a:hover {
+    opacity: 0.5;
+}
+        .welcome-message {
+            color: white;
+            padding: 1px;
+            position: relative;
+            overflow: hidden;
+            height: 50px; 
+        }
+
+        .message {
+            position: absolute;
+            white-space: nowrap;
+            animation: slide 30s linear infinite; }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(100%); 
+            }
+            100% {
+                transform: translateX(-100%); 
+            }
+        }
+/* Styles Responsives */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .opening-hours {
+        margin: 5px 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .service, .training {
+        width: calc(45% - 40px); /* Ajustement pour les écrans moyens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service, .training {
+        width: calc(100% - 40px); /* Ajustement pour les petits écrans */
+    }
+
+    .navbar ul {
+        align-items: center;
+    }
+
+    .slider {
+        margin-top: 60px; /* Ajustement pour la navbar fixe */
+    }
+}
+
+/* .service */
+.container {
+    /* max-width: 1200px; */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section {
+    flex: 1 1 45%;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+}
+h1, h2 {
+    color: #007bff;
+}
+.icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 10px;
+}
+p {
+    line-height: 1.6;
+}
+    </style>
+    <script>
+        const slides = document.querySelector('.slides');
+        let index = 0;
+
+        function showSlide() {
+            const totalSlides = 3; 
+            index = (index + 1) % totalSlides;
+            const offset = -index * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(showSlide, 3000); 
+        function toggleSubList(id) {
+            const subList = document.getElementById(id);
+            if (subList.style.display === "block") {
+                subList.style.display = "none"; 
+            } else {
+                subList.style.display = "block"; 
+            }
+        }
+        function envoyerMessage() {
+          const nom = document.getElementById('nom').value;
+          const prenom = document.getElementById('prenom').value;
+          const adresse = document.getElementById('adresse').value;
+          const formation = document.getElementById('formation').value;
+          const message = document.getElementById('message').value;
+          const contactMode = document.querySelector('input[name="contact-method"]:checked').value;
+  
+          if (contactMode === 'email') {
+              const emailLink = `mailto:mukashemaanita21@gmail.com?subject=Demande%20de%20formation&body=Nom%3A%20${encodeURIComponent(nom)}%APrénom%3A%20${encodeURIComponent(prenom)}%AAdresse%3A%20${encodeURIComponent(adresse)}%AFormation%3A%20${encodeURIComponent(formation)}%AMessage%3A%20${encodeURIComponent(message)}`;
+              alert("Tentative d'ouverture de l'email...");
+              window.location.href = emailLink;
+          } else if (contactMode === 'whatsapp') {
+              const whatsappMessage = `Nom: ${nom} \nPrénom: ${prenom} \nAdresse: ${adresse} \nFormation: ${formation} \nMessage: ${message}`;
+              const whatsappLink = `https://api.whatsapp.com/send?phone=25779463631&text=${encodeURIComponent(whatsappMessage)}`;
+              alert("Tentative d'ouverture de WhatsApp...");
+              window.open(whatsappLink, '_blank');
+          }
+      }
+        
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";  
+    dots[slideIndex - 1].className += " active";
+
+    setTimeout(showSlides, 3000);
+}
+        
+    </script>
+    <div class="navbar">
+        <div class="logo">
+            <img src="Josnet pictures/logo.png" alt="Logo">
+            <div class="opening-hours"><strong>
+                Ville, Avenue de l'Amitié <br>
+                Galerie K&G 1er étage <br>
+                Du lundi au samedi<br>
+                de 8h30 à 12h00 - 13h00 à 17h<br>
+                +257 79 46 36 31</strong>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-item"><strong><a href="#Accueil">Accueil</a></strong></div>
+            <div class="menu-item"><strong><a href="#propos">A propos</a></strong></div>
+            <div class="menu-item"><strong><a href="#services">Nos services</a></strong>
+                <div class="sub-list">
+                    <a class="sub-item" href="#internet">Fournir accès internet</a>
+                    <a class="sub-item" href="#consultance">Consultance</a>
+                    <a class="sub-item" href="#produits">Vente en ligne des produits </a>
+                    <a class="sub-item" href="#vente">Vente des services informatiques  </a>
+                    <a class="sub-item" href="#web">Conception des sites web</a>
+                    <a class="sub-item" href="#developement">Développement personnel et communautaire</a>
+                    <a class="sub-item" href="#reparation">Réparations des équipement informatiques </a>
+                    <a class="sub-item" href="#maintenance">Maintenance des systèmes informatiques  </a>
+                    <a class="sub-item" href="#cctv">Sécurité bâtiment par vidéo de surveillance </a>
+                </div>
+            </div>
+            <div class="menu-item"><strong><a href="#trainings">Nos offres formations</a></strong>
+                <div class="sub-list">
+                    <a class="sub-item" href="#reseau">Réseau informatique</a>
+                    <a class="sub-item" href="#informatique">Informatique générale</a>
+                    <a class="sub-item" href="#cablage">Câblage réseau</a>
+                    <a class="sub-item" href="#bureautique">Bureautique</a>
+                    <a class="sub-item" href="#design">Web Design </a>
+                    <a class="sub-item" href="#anglais">Anglais</a>
+                    <a class="sub-item" href="#cyber">Cybersécurité</a>
+                    <a class="sub-item" href="#eqpt">video surveillance</a>
+                    <a class="sub-item" href="#photo">Design photographique</a>
+                </div>
+            </div>
+            <div class="menu-item"><strong><a href="#contactForm">Rejoignez-nous</a></strong></div>
+        </div>
+    </div>
+    <div class="slider" id="Accueil"> 
+        <div class="slides">
+            <div class="slide">
+                <img src="./Josnet pictures/acc1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="./Josnet pictures/acc2.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="./Josnet pictures/acc111.jpg" alt="Image 3"><div class="pop" id="propos"></div>
+            </div>
+        </div>
+        </div>
+    <div class="section" id="propos"> <h1> À PROPOS DE NOUS</h1></div>        
+             <center><h2>JOSNET NETWORK AND SERVICES COMPANY LIMITED</h2></center>
+               <center> <h3><strong>A NETWORK FOR YOU, CONNECTIVITY FOR THE FUTURE</strong></h3></center>
+                <p>Société de services informatiques offrant un large éventail de solutions, notamment l'accès à internet, 
+                la réparation informatique, le marketing digital, la formation en informatique, 
+                télécommunications et autres. Nous sommes une société d'informatique et de services polyvalente, 
+            offrant une gamme complète de solutions pour répondre aux besoins de nos clients. <br>
+            En plus de fournir des connexions internet fiables, 
+            nous proposons des formations en informatique pour les étudiants, 
+            ainsi que des services de photographie et de vidéographie pour capturer des moments précieux. <br>
+            Notre plateforme en ligne permet également aux clients d'acheter une variété de produits de qualité. <br>
+            Pour rester en contact avec notre communauté,
+            Pour toute question ou demande, Pour plus d'infos n'hésitez pas à nous contacter par email à
+            <a href="mailto:infojosnetent@gmail.com" class="email">infojosnetent@gmail.com</i></a> </p></div> 
+
+        <div class="section" id="services"><h1>Nos Services</h1></div>
+        <div class="services">
+            <div class="service" id="internet">
+                 <h2><span class="icon">📡</span>Fournir accès internet </h2>
+                 <img src="Josnet pictures/reseau1.jpeg" alt="">
+                <center> <h4>WI-FI Hotspot</h4></center>
+                <p>Nous garantissons à nos clients un accès Internet rapide et fiable, en leur fournissant des solutions de connectivité 
+                adaptées à leurs besoins.</p>
+            </div> 
+            <div class="service" id="consultance">
+                <h2><span>🛃</span>Consultance</h2>
+                <img src="Josnet pictures/consultance.jpg" alt="">
+                <p>Notre équipe de consultants en informatique offre des conseils stratégiques pour aider nos
+                     clients à optimiser leurs infrastructures et à adopter les meilleures pratiques en matière de technologie</p>
+            </div>
+            <div class="service" id="produits">
+                <h2><span >🛒</span>Vente en ligne des produits </h2>
+                <img src="Josnet pictures/vente3.jfif" alt="">
+                <p>Nous exploitons une plateforme de commerce électronique où nos clients peuvent acheter 
+                    une gamme de produits informatiques de qualité, avec une expérience d'achat fluide et sécurisée.</p>
+            </div>
+            <div class="service" id="vente">
+                <h2><span>🏪</span>Vente des services informatiques  </h2>
+                <img src="Josnet pictures/informatique1.jpg" alt="">
+                <p>En plus de nos produits, nous proposons une gamme de services informatiques personnalisés
+                    pour répondre aux besoins spécifiques de nos clients.</p>
+            </div>
+            <div class="service" id="web">
+                <h2><span>💻</span>Conception des sites Web</h2>
+                <img src="Josnet pictures/web.jpeg" alt="">
+               <center><strong> <ul>Site Web reactif</ul>
+                <ul>Sites E-commerce</ul>
+                <ul>Page de Redirection</ul></strong></center>
+                <p>Nous concevons des sites Web personnalisés pour nos clients, en mettant l'accent sur l'esthétique, la fonctionnalité 
+                et l'expérience utilisateur</p>
+            </div>
+            <div class="service" id="developement">
+                <h2><span>📚</span>Développement personnel et communautaire </h2>
+                <img src="Josnet pictures/3.jpg" alt="">
+                <p>Nous proposons des programmes de développement personnel et communautaire qui utilisent la technologie 
+                 comme levier pour autonomiser les individus et renforcer les communautés.</p>
+            </div>
+            <div class="service" id="reparation">
+                <h2><span>🛠️</span>Réparations des équipement informatiques </h2>
+                <img src="Josnet pictures/reparation.jpg" alt="">
+                <p>Nous offrons des services de dépannage et de réparation pour une variété d'équipements, allant des ordinateurs aux téléphones,
+                     en passant par les routeurs.</p>
+            </div>
+            <div class="service" id="maintenance">
+                <h2><span>🛠️</span>Maintenance des systèmes informatiques </h2>
+                <img src="Josnet pictures/raparation.jpg" alt="">
+               <center><strong> <ul>installation des serveurs & postes de travail</ul>
+                <ul>montage & dépannage informatique</ul></strong></center>
+                <p>Nous assurons la maintenance régulière des systèmes informatiques 
+                    de nos clients pour garantir leur bon fonctionnement et leur sécurité à long terme.</p>
+                </div>
+            <div class="service" id="cctv">
+                <h2><span>🔒</span>Sécurité bâtiment par caméra de surveillance  </h2>
+                <img src="Josnet pictures/surv4.webp" alt="">
+
+                <center><strong><ul>Camera IP</ul>
+                <ul>Enregistreurs NVR</ul></strong></center>
+                <p>Nous disposons des programmes de formation sur mesure pour aider nos clients à développer leurs compétences en informatique, 
+                    qu'il s'agisse de logiciels spécifiques des solutions de connectivités adaptées à leurs besoins.</p>
+        </div>
+            </div>
+        <div class="section" id="trainings"><h1>Nos Formations</h1></div>
+        <div class="trainings">
+            <div class="training" id="reseau">
+                <h2><span>🔌 </span>Réseau Informatique</h2>
+                <img src="Josnet pictures/res.jpg" alt="">
+                
+                <p> En plus de nos produits, nous proposons une gamme de services informatiques personnalisés 
+                    pour répondre aux besoins spécifiques de nos clients.</p>
+            </div>
+            <div class="training" id="informatique">
+               <h2><span class="icon"> 🖥</span>Informatique générale</h2>
+                <img src="Josnet pictures/general1.jpg" alt="">
+                <p>Nous proposons des programmes de formation sur mesure pour aider nos clients à développer leurs compétences en informatique,
+                     qu'il s'agisse de logiciels spécifiques des solutions de connectivités adaptées à leurs besoins.</p>
+            </div>
+            <div class="training" id="cablage">
+                <h2> 🔌Câblage réseau </h2>
+                <img src="Josnet pictures/cablage.jpg" alt="">
+                <p>Nous fournissons des services d'installation et de gestion de câblage structuré pour
+                    garantir une connectivité fiable dans les réseaux informatiques de nos clients.</p>
+            </div>
+            <div class="training" id="bureautique">
+                <h2><span class="icon">⌨</span> Bureautique </h2>
+                <img src="Josnet pictures/cours-bureautique-debutant.webp" alt="">
+              <center> <strong> <ul>Word </ul>
+                <ul>Excel</ul>
+                <ul>PowerPoint</ul>
+                <ul>Internet</ul></strong></center>
+                <p>Nous proposons une expertise dans l'utilisation avancée des logiciels Microsoft Word et 
+                    Excel pour vous aider à optimiser vos processus de travail et à gagner en productivité.</p>
+            </div>
+            <div class="training" id="design">
+               <h2><span> 📖</span>Web Design </h2>
+                <img src="Josnet pictures/web.jpeg" alt="">
+               <center><strong> <ul>HTML </ul>
+                <ul>CSS</ul>
+                <ul>Javascript</ul>
+                <ul>Python</ul>
+                <ul>PHP</ul></strong></center>
+                <p>Besoin d'un site web sur mesure ? Notre équipe de développeurs web peut créer des solutions personnalisées 
+                    en utilisant les dernières technologies pour répondre à vos besoins spécifiques.</p>
+            </div>
+            <div class="training" id="anglais">
+                <h2><span>📝</span>Anglais</h2>
+                <img src="Josnet pictures/angl.jpeg" alt="">
+               <center><strong> <ul>Beginner</ul>
+                <ul>Intermediate</ul>
+                <ul>Advanced</ul>
+                <ul>English for specific purposes</ul></strong></center>
+                <p>Pour l’apprentissage de la langue anglaise, notre société est à votre service pour vous apprendre l’anglais facilement</p>
+            </div>
+            <div class="training" id="cyber">
+                <h2><span>🔐</span>Cybersécurité</h2>
+                <img src="Josnet pictures/cyber.jpg" alt="">
+                <p>Que vous soyez débutant ou professionnel, nous vous proposons de nombreuses ressources et formations 
+                    pour vous permettre d'acquérir les compétences nécessaires pour la protection des données informatique.
+                    Nous vous aidons à choisir un programme qui correspond à vos objectifs et à votre niveau d'expérience.</p>
+            </div>
+            <div class="training" id="eqpt">
+                <h2><span>🎞</span>Video Surveillance</h2>
+                <img src="Josnet pictures/cctv1.jpg" alt="">
+                <p>Nous vous proposons un servive vous permettant d'acquierir des compétences techniques essentielles pour mettre en place
+                    un système de video-surveillance</p>
+            </div>
+            <div class="training" id="photo">
+                <h2><span>📸</span>Design photographique</h2>
+                <img src="Josnet pictures/photo.jpg" alt="">
+             <center><strong>  <ul>Adobe photoshop</ul>
+                <ul>Adobe premiere pro</ul> </strong></center>
+                <p>Nous vous initions à faire des belles photos attrayants. 
+                    La formation en design photographique est un investissement précieux pour quiconque souhaite se lancer
+                     dans le domaine de la photographie ou du design visuel.</p>
+            </div>
+        </div> </div>
+
+<div class="section" id="contactForm"><h1>Formulaire de Contact</h1></div>
+<form id="contact-form" onsubmit="envoyerMessage(); return false;">
+<div class="container">
+    <form id="contact-form">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" name="adresse" required>
+
+        <label for="formation">Souhaiteriez-vous suivre une formation en particulier?</label>
+        <select id="formation" name="formation">
+            <option value="Reseau informatique">Reseau informatique</option>
+            <option value="Cybersécurité">Cybersécurité</option>
+            <option value="Bureautique">Bureautique</option>
+            <option value="Anglais">Anglais</option>
+            <option value="web Design">Web Design</option>
+            <option value="camera surveillance">Camera surveillance</option>
+            <option value="Design photographique">Design photographique</option>
+        </select>
+
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" ></textarea>
+
+        <label>Choisissez le mode de contact</label>
+        <div class="contact-options">
+            <div class="contact-option">
+                <input type="radio" id="whatsapp" name="contact-method" value="whatsapp" required>
+                <label for="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</label>
+            </div>
+            <div class="contact-option">
+                <input type="radio" id="email" name="contact-method" value="email" required>
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+            </div>
+        </div>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+
+    <footer><div class="left">&copy; 2023 Josnet. <br>Tous droits réservés.</div>
+        <div class="maps"><p>Ville, Avenue de l'Amitié <br>
+             Galerie K&G 1er étage <br>
+           Heures d'ouverture : Lundi au Samedi de 8h30 à 12h00 - 13h00 à 17h <br>
+        Téléphone: <a href="tel:+25779463631">+257 79 46 36 31</a> <br>
+            Localisation: 
+            <a href="https://www.google.com/maps/place/J988%2BJHX,+Bujumbura" target="_blank">Voir sur la carte</a>   </p>  
+        </div>     
+             <ul class="social-links">
+                <li><a href="mailto:infojosnetent@gmail.com" class="email"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://www.facebook.com/josnetnetworkandservicescompany" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/votreprofil" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/votreprofil" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+
+            </ul>
+            <div class="welcome-message">
+                <div class="message"><h4><strong>Bienvenue 💟 Merci de visiter notre site. Profitez de nos offres 💟</strong></h4></div></div>
+    </footer>
+<script src="./JS/javascript.js"></script>
+</body>
+</html>
