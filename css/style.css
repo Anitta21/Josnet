@@ -280,6 +280,51 @@ padding-top: 5%;
             }
         }
 /* Styles Responsives */
+
+/* Media Queries pour différentes tailles d'écran */
+@media (max-width: 120px) {
+  .service, .training {
+    width: calc(30% - 40px); /* Ajustement pour les écrans plus petits */
+  }
+}
+
+@media (max-width: 992px) {
+  .service, .training {
+    width: calc(45% - 40px); /* Ajustement pour les écrans intermédiaires */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .service, .training {
+    width: calc(100% - 40px); /* Ajustement pour les petits écrans */
+  }
+
+  .slider {
+    margin-top: 60px; /* Ajustement pour la navbar fixe */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar img {
+    height: 100px; /* Ajuster la taille de l'image du logo */
+    width: 100px;
+  }
+
+  .opening-hours {
+    font-size: 12px; /* Réduire la taille de la police */
+  }
+
+  button {
+    width: 100%; /* Boutons adaptatifs */
+  }
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
