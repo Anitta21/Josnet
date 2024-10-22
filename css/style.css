@@ -14,7 +14,7 @@ body {
    padding: 0px 0px;
     position: fixed;
     top: 0;
-    width: 200%;
+    width: 120%;
    height: 25%;
     z-index: 2000;
     border-radius: 50px;
@@ -280,6 +280,21 @@ padding-top: 5%;
             }
         }
 /* Styles Responsives */
+@media (max-width: 767px) {
+  /* Styles pour les écrans étroits */
+  .element {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Styles pour les écrans plus larges */
+  .element {
+    width: 50%;
+    font-size: 18px;
+  }
+}
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
