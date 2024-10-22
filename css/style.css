@@ -11,7 +11,7 @@ body {
     justify-content: space-between;
     background-color: #ffffff;
     color: #007bff;
-   padding: 0px 0px;
+/*    padding: 0px 0px; */
     position: fixed;
     top: 0;
     width: 100%;
@@ -282,7 +282,7 @@ padding-top: 5%;
 /* Styles Responsives */
 @media (max-width: 767px) {
   /* Styles pour les écrans étroits */
-  .element {
+  .navbar {
     width: 100%;
     font-size: 16px;
   }
@@ -290,13 +290,26 @@ padding-top: 5%;
 
 @media (min-width: 768px) {
   /* Styles pour les écrans plus larges */
-  .element {
+  .navbar {
+    width: 50%;
+    font-size: 18px;
+  }
+}
+.navbar {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Styles pour les écrans plus larges */
+  footer {
     width: 50%;
     font-size: 18px;
   }
 }
 @media (max-width: 768px) {
-    .navbar {
+    footer {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
