@@ -11,7 +11,7 @@ body {
     justify-content: space-between;
     background-color: #ffffff;
     color: #007bff;
-/*    padding: 0px 0px; */
+   padding: 0px 0px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -171,8 +171,7 @@ textarea, input, select {
     border: none;
 }
 button {
-    width: 40%;
-    padding: 10px;
+    width: 60%;
     margin-bottom: 10px;
     box-sizing: border-box;
     background-color: #007bff;
@@ -218,6 +217,7 @@ text-align: center;
     border: 5px solid #ffffff;
     box-shadow: 3px 0px 0px 3px #0072c6;
     display: block;
+    width: 100%;
 }
 .maps p {
     text-align: center;
@@ -234,7 +234,7 @@ padding-top: 5%;
 .social-links {
     list-style-type: none;
     padding: 0;
-    gap: 20px; 
+    gap: 10px; 
     padding-left: 60%;
     display: inline-flex;
   
@@ -280,36 +280,8 @@ padding-top: 5%;
             }
         }
 /* Styles Responsives */
-@media (max-width: 767px) {
-  /* Styles pour les écrans étroits */
-  .navbar {
-    width: 100%;
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* Styles pour les écrans plus larges */
-  .navbar {
-    width: 50%;
-    font-size: 18px;
-  }
-}
-.navbar {
-    width: 100%;
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* Styles pour les écrans plus larges */
-  footer {
-    width: 50%;
-    font-size: 18px;
-  }
-}
 @media (max-width: 768px) {
-    footer {
+    .navbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
