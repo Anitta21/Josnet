@@ -11,13 +11,13 @@ body {
     justify-content: space-between;
     background-color: #ffffff;
     color: #007bff;
-   padding: 0px 0px;
+    padding: 10px 15px;
     position: fixed;
     top: 0;
     width: 100%;
-   height: 25%;
+   height: 15%;
     z-index: 2000;
-    border-radius: 50px;
+    border-radius: 0 0 20px 20px;
     border: 5px solid #007bff;
     box-shadow: 3px 3px 3px 3px #0072c6;
 }
@@ -29,32 +29,35 @@ color: #0072c6;
     display: flex;
 }
 .navbar img {
-    height: 150px;
-    width: 150px;
-    padding-left: 10%;
-    padding-top: 0%;
+    height: auto;
+    width: auto;
+    margin-top: 0px;
+    max-height: 50px;
+    margin-right: 10px;
 }
 
 .opening-hours {
-    margin-right: 20px;
-    font-size: 14px;
-    margin-top: 20px;
+    margin-right: 20%;
+    font-size: 10px;
 }
 
 .menu {
     display: flex; 
     justify-content: space-around;
     background-color: white;
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    margin-left: 1%;
 }
 .menu-item {
     position: relative;
     color: blue;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 5px 5px;
+    padding-top: 0%;
+    margin-right: 40px;
+    font-size: 10px;
+    margin-top: 0px;
 }
 .menu-item a {
     color: #007bff;
@@ -82,7 +85,7 @@ color: #0072c6;
     background-color: #e9ecef; 
 }
 .slider {
-    margin-top: 20%;
+    margin-top: 10%;
     overflow: hidden;
     width: 100%;
 }
@@ -171,7 +174,7 @@ textarea, input, select {
     border: none;
 }
 button {
-    width: 60%;
+    width: 80%;
     margin-bottom: 10px;
     box-sizing: border-box;
     background-color: #007bff;
@@ -217,7 +220,7 @@ text-align: center;
     border: 5px solid #ffffff;
     box-shadow: 3px 0px 0px 3px #0072c6;
     display: block;
-    width: 100%;
+    width: 99%;
 }
 .maps p {
     text-align: center;
@@ -228,14 +231,14 @@ color: hsl(119, 98%, 49%);
 
 }
 .left {
-padding-right: 60%;
+padding-right: 20%;
 padding-top: 5%;
 }
 .social-links {
     list-style-type: none;
     padding: 0;
     gap: 10px; 
-    padding-left: 60%;
+    padding-left: 30%;
     display: inline-flex;
   
 }
@@ -306,6 +309,9 @@ padding-top: 5%;
 }
 
 @media (max-width: 480px) {
+    .navbar{
+        width: calc(100% - 40px);
+    }
     .service, .training {
         width: calc(100% - 40px); /* Ajustement pour les petits écrans */
     }
