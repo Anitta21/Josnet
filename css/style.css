@@ -14,7 +14,7 @@ body {
     padding: 10px 15px;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 97%;
    height: 15%;
     z-index: 2000;
     border-radius: 0 0 20px 20px;
@@ -46,18 +46,14 @@ color: #0072c6;
     justify-content: space-around;
     background-color: white;
     flex-wrap: wrap;
-    margin-left: 1%;
+    margin-left: 0;
 }
 .menu-item {
-    position: relative;
     color: blue;
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 5px;
-    padding-top: 0%;
-    margin-right: 40px;
-    font-size: 10px;
-    margin-top: 0px;
+    padding: 8px;
+   margin: 5px;
 }
 .menu-item a {
     color: #007bff;
@@ -79,15 +75,14 @@ color: #0072c6;
     padding: 5px 10px;
     color: #007bff;
     text-decoration: none; 
-    display: block; 
 }
 .sub-item:hover {
     background-color: #e9ecef; 
 }
 .slider {
-    margin-top: 10%;
     overflow: hidden;
     width: 100%;
+    margin-top: 80px;
 }
 
 .slides {
@@ -117,6 +112,9 @@ h2 {
     color: #0072c6; 
     margin-top: 20px;
 }
+h1,h2, h3, p{
+    word-wrap: break-word;
+}
 p {
     line-height: 1.6;
    text-align: justify;
@@ -135,8 +133,6 @@ p {
     padding: 10px;
     margin: 2px;
     width: calc(30% - 40px);
-    margin-left: 1%;
-    margin-right: 1%;
 }
 .container {
     max-width: 30%;
@@ -169,7 +165,6 @@ textarea, input, select {
     box-sizing: border-box;
     background-color: #fefefe;
     box-shadow: 0 2px 5px #007bff;
-    padding: 10px;
     border-radius: 5px;
     border: none;
 }
@@ -214,13 +209,14 @@ text-align: center;
     background-color:#0072c6;
     color: #ffffff;
     position: relative;
+    padding: 20px;
     justify-content: space-between;
     align-items: center;
     border-radius: 100% 100% 0% 0%;
     border: 5px solid #ffffff;
     box-shadow: 3px 0px 0px 3px #0072c6;
     display: block;
-    width: 99%;
+    width: 95%;
 }
 .maps p {
     text-align: center;
@@ -272,7 +268,8 @@ padding-top: 5%;
         .message {
             position: absolute;
             white-space: nowrap;
-            animation: slide 30s linear infinite; }
+            animation: slide 30s linear infinite; 
+        }
 
         @keyframes slide {
             0% {
@@ -285,32 +282,30 @@ padding-top: 5%;
 /* Styles Responsives */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+        flex-direction: row;
+        padding: 1px 1px;
+        font-size: 8px;
+        height: fit-content
     }
 
     .opening-hours {
         margin: 5px 0;
+        font-size: 8px;
     }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar ul li {
-        margin: 5px 0;
+    .menu{
+        flex-direction: row;
+        width: auto;
+        height: fit-content;
     }
 
     .service, .training {
-        width: calc(45% - 40px); /* Ajustement pour les écrans moyens */
+        width: calc(100% - 20px); /* Ajustement pour les écrans moyens */
     }
 }
 
 @media (max-width: 480px) {
     .navbar{
-        width: calc(100% - 40px);
+        padding: 10px 15px;
     }
     .service, .training {
         width: calc(100% - 40px); /* Ajustement pour les petits écrans */
@@ -322,6 +317,10 @@ padding-top: 5%;
 
     .slider {
         margin-top: 60px; /* Ajustement pour la navbar fixe */
+    }
+    footer{
+        flex-direction: column;
+        padding: 10px;
     }
 }
 
