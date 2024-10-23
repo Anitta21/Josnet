@@ -301,6 +301,8 @@ padding-top: 5%;
     .service, .training {
         width: calc(100% - 20px); /* Ajustement pour les écrans moyens */
     }
+    .slide{
+         margin-top: 20px;
 }
 
 @media (max-width: 480px) {
