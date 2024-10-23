@@ -135,7 +135,7 @@ p {
     width: calc(30% - 40px);
 }
 .container {
-    max-width: 30%;
+    max-width: 40%;
     padding: 20px;
     background-color: white;
     align-items: center;
