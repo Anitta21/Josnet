@@ -297,6 +297,9 @@ padding-top: 5%;
         width: auto;
         height: fit-content;
     }
+    .slide {
+        margin-top: 20px; 
+    }
 
     .service, .training {
         width: calc(100% - 20px); /* Ajustement pour les écrans moyens */
