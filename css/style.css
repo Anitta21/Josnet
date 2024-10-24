@@ -360,7 +360,19 @@ padding-top: 5%;
         margin-top: 20px;
     }
 }
+@media (max-width: 450px) {
+    .language-selector {
+        font-size: 5px; /* Réduire la taille de police sur petits écrans */
+    }
 
+    .dropdown-content {
+        min-width: 10px; /* Réduire la largeur minimale du menu déroulant */
+    }
+
+    .dropdown-content a {
+        padding: 3px 5px; /* Réduire le padding des liens */
+    }
+}
 @media (max-width: 480px) {
     .navbar{
         padding: 10px 15px;
