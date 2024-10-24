@@ -392,6 +392,29 @@ padding-top: 5%;
         padding: 2px 2px; /* Réduire encore le padding des liens */
     }
 }
+@media (max-width: 320px) {
+    .language-selector {
+        font-size: 5px; /* Réduire la taille de police encore plus */
+    }
+
+    .dropdown-content {
+        min-width: 10px; /* Réduire la largeur minimale du menu déroulant */
+    }
+
+    .dropdown-content a {
+        padding: 1px 1px; /* Réduire le padding des liens au minimum */
+    }
+    .navbar{
+        padding: 5px 8px;
+    }
+        .navbar ul {
+        align-items: center;
+    }
+
+    .slider {
+        margin-top: 80px; /* Ajustement pour la navbar fixe */
+    }
+}
 
 /* .service */
 .container {
