@@ -62,7 +62,6 @@ body > .skiptranslate {
 body > .goog-te-banner-frame {
     display: none !important; /* Cacher la barre */
 }
-
 .navbar .logo {
     display: flex;
 }
