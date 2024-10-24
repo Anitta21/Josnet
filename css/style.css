@@ -319,7 +319,7 @@ padding-top: 5%;
     }
 
     .slider {
-        margin-top: 60px; /* Ajustement pour la navbar fixe */
+        margin-top: 80px; /* Ajustement pour la navbar fixe */
     }
     footer{
         flex-direction: column;
