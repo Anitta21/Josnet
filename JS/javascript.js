@@ -1,10 +1,38 @@
- function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'fr', // La langue par défaut de votre page
-            includedLanguages: 'en,fr,es,de,it', // Langues disponibles
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'fr', // La langue par défaut de votre page
+        includedLanguages: 'en,fr,es,de,it', // Langues disponibles
+        autoDisplay: false // Ne pas afficher automatiquement le sélecteur
+    }, 'google_translate_element');
+}
+
+function toggleDropdown() {
+    document.getElementById("language-dropdown").classList.toggle("show");
+}
+
+function setLanguage(lang) {
+    var googleTranslate = new google.translate.TranslateElement();
+    googleTranslate.translatePage(lang, 'fr'); // Traduire la page
+    toggleDropdown(); // Fermer le menu
+}
+
+// Ferme le menu si l'utilisateur clique en dehors
+window.onclick = function(event) {
+    if (!event.target.matches('.language-selector')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
     }
+}
+
+// Charger le script Google Translate
+var googleScript = document.createElement('script');
+googleScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+document.body.appendChild(googleScript);
 const slides = document.querySelector('.slides');
         let index = 0;
 
