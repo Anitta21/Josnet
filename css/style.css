@@ -167,10 +167,11 @@ p {
     display: inline-block;
     padding: 10px 15px;
     margin-top: 10px;
-    background-color:blue;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    background-color: #007bff;
+    box-shadow: 0 2px 5px #007bff;
 }
 
 .link-button:hover {
@@ -224,16 +225,16 @@ textarea, input, select {
     border: none;
 }
 button {
-    width: 80%;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+   display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
     background-color: #007bff;
     box-shadow: 0 2px 5px #007bff;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    align-items: center;
     border: none;
+    cursor: pointer;
 }
 button:hover {
     background-color: #19d235;
