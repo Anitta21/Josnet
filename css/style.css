@@ -53,6 +53,16 @@ body {
     display: block; /* Afficher le menu déroulant */
 }
 
+/* Masquer le message de Google Translate */
+body > .skiptranslate {
+    display: none !important; /* Cacher le message */
+}
+
+/* Masquer la barre de traduction Google */
+body > .goog-te-banner-frame {
+    display: none !important; /* Cacher la barre */
+}
+
 .navbar .logo {
     display: flex;
 }
