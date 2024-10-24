@@ -33,6 +33,7 @@ window.onclick = function(event) {
 var googleScript = document.createElement('script');
 googleScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
 document.body.appendChild(googleScript);
+
 const slides = document.querySelector('.slides');
         let index = 0;
 
