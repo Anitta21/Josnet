@@ -21,18 +21,6 @@ body {
     border: 5px solid #007bff;
     box-shadow: 3px 3px 3px 3px #0072c6;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar {
-    background-color: #0072c6;
-    color: white;
-    padding: 10px 15px;
-    position: relative;
-}
 
 .language-selector {
     cursor: pointer;
