@@ -1,7 +1,7 @@
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'fr', // La langue par défaut de votre page
-        includedLanguages: 'en,fr,sw,rn,es,de,it, // Langues disponibles
+        includedLanguages: 'en,fr,es,de,it,sw,rn', // Langues disponibles
         autoDisplay: false // Ne pas afficher automatiquement le sélecteur
     }, 'google_translate_element');
 }
@@ -13,7 +13,7 @@ function toggleDropdown() {
 function setLanguage(lang) {
     var googleTranslate = new google.translate.TranslateElement();
     googleTranslate.translatePage(lang, 'fr'); // Traduire la page
-    toggleDropdown(); // Fermer le menu
+    toggleDropdown(); // Fermer le menu après la sélection
 }
 
 // Ferme le menu si l'utilisateur clique en dehors
