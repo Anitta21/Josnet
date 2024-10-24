@@ -4,6 +4,12 @@ function googleTranslateElementInit() {
         includedLanguages: 'en,fr,es,de,it,sw,rn', // Langues disponibles
         autoDisplay: false // Ne pas afficher automatiquement le sélecteur
     }, 'google_translate_element');
+
+    // Vérifier la langue enregistrée et traduire si nécessaire
+    const storedLang = localStorage.getItem('selectedLanguage');
+    if (storedLang) {
+        setLanguage(storedLang);
+    }
 }
 
 function toggleDropdown() {
@@ -13,6 +19,7 @@ function toggleDropdown() {
 function setLanguage(lang) {
     var googleTranslate = new google.translate.TranslateElement();
     googleTranslate.translatePage(lang, 'fr'); // Traduire la page
+    localStorage.setItem('selectedLanguage', lang); // Enregistrer la langue sélectionnée
     toggleDropdown(); // Fermer le menu après la sélection
 }
 
