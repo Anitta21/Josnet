@@ -1,3 +1,10 @@
+ function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'fr', // La langue par défaut de votre page
+            includedLanguages: 'en,fr,es,de,it', // Langues disponibles
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
 const slides = document.querySelector('.slides');
         let index = 0;
 
