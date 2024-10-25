@@ -23,13 +23,13 @@ body {
 }
 .language-selector {
     cursor: pointer;
-    font-size: 6px; 
+    font-size: 5px; 
     margin: 0;
 }
 .dropdown-content {
     display: none; /* Cacher par défaut */
     background-color: white;
-    min-width: 20px;
+    min-width: 15px;
     box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -378,14 +378,14 @@ padding-top: 5%;
     }
     footer{
         flex-direction: column;
-        padding: 10px;
+        padding: 8px;
     }
     .language-selector {
         font-size: 3px; /* Réduire encore la taille de police */
     }
 
     .dropdown-content {
-        min-width: 10px; /* Réduire la largeur minimale du menu déroulant */
+        min-width: 8px; /* Réduire la largeur minimale du menu déroulant */
     }
 
     .dropdown-content a {
