@@ -1,57 +1,27 @@
-<<<<<<< HEAD
-const languageSelector = document.querySelector('.language-selector');
-const selectedLanguage = languageSelector.querySelector('.selected-language');
-const languageOptions = languageSelector.querySelector('.language-options');
-const languageItems = languageSelector.querySelectorAll('.language-options li');
-const chevronIcon = languageSelector.querySelector('.fa-chevron-down');
-
-languageSelector.addEventListener('click', () => {
-  languageOptions.style.display = languageOptions.style.display === 'none' ? 'block' : 'none';
-  chevronIcon.classList.toggle('fa-chevron-up');
-});
-
-languageItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const newLanguage = item.dataset.lang;
-    selectedLanguage.textContent = item.textContent;
-    // Mettez à jour la langue du site ici
-    console.log(`Changement de langue vers : ${newLanguage}`);
-    languageOptions.style.display = 'none';
-    chevronIcon.classList.remove('fa-chevron-up');
-  });
-});
-=======
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
-        pageLanguage: 'fr', // La langue par défaut de votre page
-        includedLanguages: 'en,fr,es,de,it,sw,rn', // Langues disponibles
-        autoDisplay: false // Ne pas afficher automatiquement le sélecteur
+        pageLanguage: 'fr',
+        includedLanguages: 'fr,en,es,sw,rn,zh,ru,tr,ar,pt,la',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
 }
-function setLanguage(lang) {
-    var googleTranslate = new google.translate.TranslateElement();
-    googleTranslate.translatePage(lang, 'fr'); // Traduire la page
-}
 
-// Ferme le menu si l'utilisateur clique en dehors
-window.onclick = function(event) {
-    if (!event.target.matches('.language-selector')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
+const languageSelector = document.querySelector('.language-selector');
+const languageOptions = languageSelector.querySelector('.language-options');
 
-// Charger le script Google Translate
-var googleScript = document.createElement('script');
-googleScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-document.body.appendChild(googleScript);
->>>>>>> abe888bd299402d0e28d02d18b6182f4c0f2ddf4
+languageSelector.addEventListener('click', () => {
+    languageOptions.style.display = languageOptions.style.display === 'none' ? 'block' : 'none';
+});
 
+languageOptions.querySelectorAll('li').forEach(item => {
+    item.addEventListener('click', () => {
+        const lang = item.dataset.lang;
+        const translateElement = new google.translate.TranslateElement();
+        translateElement.setEnabled(true);
+        translateElement.setLanguage(lang);
+        languageOptions.style.display = 'none';
+    });
+});
 const slides = document.querySelector('.slides');
         let index = 0;
 
@@ -88,41 +58,41 @@ const slides = document.querySelector('.slides');
             }
         }
         
-        function envoyerMessage() {
-            const nom = document.getElementById('nom').value;
-            const prenom = document.getElementById('prenom').value;
-            const adresse = document.getElementById('adresse').value;
-            const typeSelection = document.getElementById('type-selection').value;
-            const formation = document.getElementById('formation').value; 
-            const service = document.getElementById('service').value; 
-            const message = document.getElementById('message').value;
-            const contactMode = document.querySelector('input[name="contact-method"]:checked').value;
-        
-            // Construire le message à envoyer
-            let finalMessage = `Nom: ${nom}\nPrénom: ${prenom}\nAdresse: ${adresse}\nType de Demande: ${typeSelection}\n`;
-        
-            // Inclure la formation seulement si le type de demande est "formation"
-            if (typeSelection === 'formation') {
-                finalMessage += `Formation: ${formation}\n`;
-            }
-        
-            // Inclure le service si le type de demande est "service"
-            if (typeSelection === 'service') {
-                finalMessage += `Service: ${service}\n`;
-            }
-        
-            finalMessage += `Message: ${message}`; 
-        
-            if (contactMode === 'email') {
-                const emailLink = `mailto:mukashemaanita21@gmail.com?subject=Demande%20de%20${typeSelection}&body=${encodeURIComponent(finalMessage)}`;
-                alert("Tentative d'ouverture de l'email...");
-                window.location.href = emailLink;
-            } else if (contactMode === 'whatsapp') {
-                const whatsappLink = `https://api.whatsapp.com/send?phone=25779463631&text=${encodeURIComponent(finalMessage)}`;
-                alert("Tentative d'ouverture de WhatsApp...");
-                window.open(whatsappLink, '_blank');
-            }
-        }
+       function envoyerMessage() {
+    const nom = document.getElementById('nom').value;
+    const prenom = document.getElementById('prenom').value;
+    const adresse = document.getElementById('adresse').value;
+    const typeSelection = document.getElementById('type-selection').value;
+    const formation = document.getElementById('formation').value; 
+    const service = document.getElementById('service').value; 
+    const message = document.getElementById('message').value;
+    const contactMode = document.querySelector('input[name="contact-method"]:checked').value;
+
+    // Construire le message à envoyer
+    let finalMessage = `Nom: ${nom}\nPrénom: ${prenom}\nAdresse: ${adresse}\nType de Demande: ${typeSelection}\n`;
+
+    // Inclure la formation seulement si le type de demande est "formation"
+    if (typeSelection === 'formation') {
+        finalMessage += `Formation: ${formation}\n`;
+    }
+
+    // Inclure le service si le type de demande est "service"
+    if (typeSelection === 'service') {
+        finalMessage += `Service: ${service}\n`;
+    }
+
+    finalMessage += `Message: ${message}`; 
+
+    if (contactMode === 'email') {
+        const emailLink = `mailto:mukashemaanita21@gmail.com?subject=Demande%20de%20${typeSelection}&body=${encodeURIComponent(finalMessage)}`;
+        alert("Tentative d'ouverture de l'email...");
+        window.location.href = emailLink;
+    } else if (contactMode === 'whatsapp') {
+        const whatsappLink = `https://api.whatsapp.com/send?phone=25779463631&text=${encodeURIComponent(finalMessage)}`;
+        alert("Tentative d'ouverture de WhatsApp...");
+        window.open(whatsappLink, '_blank');
+    }
+}
         
         let slideIndex = 0;
 showSlides();
