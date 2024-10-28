@@ -338,6 +338,15 @@ padding-top: 5%;
             }
         }
 /* Styles Responsives */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0.5rem; /* Réduire le padding sur les petits écrans */
+    }
+
+    .language-selector {
+        font-size: 0.8rem; /* Réduire la taille de la police pour le sélecteur de langue */
+    }
+}
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
