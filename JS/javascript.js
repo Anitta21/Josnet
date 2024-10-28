@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const languageSelector = document.querySelector('.language-selector');
 const selectedLanguage = languageSelector.querySelector('.selected-language');
 const languageOptions = languageSelector.querySelector('.language-options');
@@ -19,6 +20,37 @@ languageItems.forEach(item => {
     chevronIcon.classList.remove('fa-chevron-up');
   });
 });
+=======
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'fr', // La langue par défaut de votre page
+        includedLanguages: 'en,fr,es,de,it,sw,rn', // Langues disponibles
+        autoDisplay: false // Ne pas afficher automatiquement le sélecteur
+    }, 'google_translate_element');
+}
+function setLanguage(lang) {
+    var googleTranslate = new google.translate.TranslateElement();
+    googleTranslate.translatePage(lang, 'fr'); // Traduire la page
+}
+
+// Ferme le menu si l'utilisateur clique en dehors
+window.onclick = function(event) {
+    if (!event.target.matches('.language-selector')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+// Charger le script Google Translate
+var googleScript = document.createElement('script');
+googleScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+document.body.appendChild(googleScript);
+>>>>>>> abe888bd299402d0e28d02d18b6182f4c0f2ddf4
 
 const slides = document.querySelector('.slides');
         let index = 0;

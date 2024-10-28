@@ -338,6 +338,7 @@ padding-top: 5%;
             }
         }
 /* Styles Responsives */
+<<<<<<< HEAD
 @media (min-width: 320px) and (max-width: 600px) {
     .navbar {
         padding: 0,2rem; /* Réduire le padding */
@@ -345,6 +346,15 @@ padding-top: 5%;
 
     .language-selector {
         font-size: 0.5rem; /* Réduire la taille de la police */
+=======
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0.5rem; /* Réduire le padding sur les petits écrans */
+    }
+
+    .language-selector {
+        font-size: 0.8rem; /* Réduire la taille de la police pour le sélecteur de langue */
+>>>>>>> abe888bd299402d0e28d02d18b6182f4c0f2ddf4
     }
 }
 @media (max-width: 768px) {
