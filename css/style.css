@@ -21,10 +21,50 @@ body {
     border: 5px solid #007bff;
     box-shadow: 3px 3px 3px 3px #0072c6;
 }
-/* .textContainer .phrases {
-color: #0072c6;
-} */
+.language-selector {
+    cursor: pointer;
+    font-size: 8px; 
+    margin-left: 10px;
+}
+.dropdown-content {
+    display: none; /* Cacher par défaut */
+    background-color: white;
+    min-width: 5px;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    width: 1px;
+    /* top: 5px; */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.arrow {
+    margin-left: 2px;
+}
+
+.show {
+    display:block;
+    font-size: 8px;
+}
+
+
+body > .skiptranslate {
+    display: none !important;
+}
+body > .goog-te-banner-frame {
+    display: none !important; 
+}
+
+#goog-gt-vt {
+    display: none !important;
+}
 .navbar .logo {
     display: flex;
 }
@@ -67,6 +107,7 @@ color: #0072c6;
     padding: 10px;
     border-radius: 5px;
     z-index: 1;
+    font-size: 10px;
 }
 .menu-item:hover .sub-list {
     display: block; 
@@ -106,11 +147,13 @@ img {
 }
 h1 {
     text-align: center;
-    color: #0072c6; 
+    color: #0072c6;
+    font-size: 20px;
 }
 h2 {
     color: #0072c6; 
     margin-top: 20px;
+    font-size: 16px;
 }
 h1,h2, h3, p{
     word-wrap: break-word;
@@ -120,6 +163,20 @@ p {
    text-align: justify;
    padding-left: 15px;
    padding-right: 15px;
+}
+.link-button {
+    display: inline-block;
+    padding: 1px 3px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    box-shadow: 0 2px 5px #007bff;
+    font-size: 10px;
+}
+
+.link-button:hover {
+    background-color: #005fa3;
 }
 .services, .trainings {
     display: flex;
@@ -169,16 +226,16 @@ textarea, input, select {
     border: none;
 }
 button {
-    width: 80%;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+   display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
     background-color: #007bff;
     box-shadow: 0 2px 5px #007bff;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    align-items: center;
     border: none;
+    cursor: pointer;
 }
 button:hover {
     background-color: #19d235;
@@ -202,6 +259,7 @@ option{
 
 h3{
     color: hsl(205, 97%, 48%);
+    font-size: 13px;
 }
 
 footer {
@@ -305,7 +363,6 @@ padding-top: 5%;
         margin-top: 20px;
     }
 }
-
 @media (max-width: 480px) {
     .navbar{
         padding: 10px 15px;
@@ -313,23 +370,55 @@ padding-top: 5%;
     .service, .training {
         width: calc(100% - 40px); /* Ajustement pour les petits écrans */
     }
-
     .navbar ul {
         align-items: center;
     }
 
     .slider {
-        margin-top: 60px; /* Ajustement pour la navbar fixe */
+        margin-top: 80px; /* Ajustement pour la navbar fixe */
     }
     footer{
         flex-direction: column;
         padding: 10px;
     }
+    .language-selector {
+        font-size: 5px; 
+    }
+
+    .dropdown-content {
+        min-width: 5px; /* Réduire la largeur minimale du menu déroulant */
+    }
+
+    .dropdown-content a {
+        padding: 2px 2px; /* Réduire encore le padding des liens */
+    }
+}
+@media (max-width: 320px) {
+    .language-selector {
+        font-size: 5px; /* Réduire la taille de police encore plus */
+    }
+
+    .dropdown-content {
+        min-width: 10px; /* Réduire la largeur minimale du menu déroulant */
+    }
+
+    .dropdown-content a {
+        padding: 1px 1px; /* Réduire le padding des liens au minimum */
+    }
+    .navbar{
+        padding: 5px 8px;
+    }
+        .navbar ul {
+        align-items: center;
+    }
+
+    .slider {
+        margin-top: 80px; /* Ajustement pour la navbar fixe */
+    }
 }
 
 /* .service */
 .container {
-    /* max-width: 1200px; */
     margin: auto;
     display: flex;
     flex-wrap: wrap;
