@@ -5,15 +5,9 @@ function googleTranslateElementInit() {
         autoDisplay: false // Ne pas afficher automatiquement le sélecteur
     }, 'google_translate_element');
 }
-
-function toggleDropdown() {
-    document.getElementById("language-dropdown").classList.toggle("show");
-}
-
 function setLanguage(lang) {
     var googleTranslate = new google.translate.TranslateElement();
     googleTranslate.translatePage(lang, 'fr'); // Traduire la page
-    toggleDropdown(); // Fermer le menu après la sélection
 }
 
 // Ferme le menu si l'utilisateur clique en dehors
