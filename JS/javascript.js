@@ -1,38 +1,24 @@
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'fr', // La langue par défaut de votre page
-        includedLanguages: 'en,fr,es,de,it,sw,rn', // Langues disponibles
-        autoDisplay: false // Ne pas afficher automatiquement le sélecteur
-    }, 'google_translate_element');
-}
+const languageSelector = document.querySelector('.language-selector');
+const selectedLanguage = languageSelector.querySelector('.selected-language');
+const languageOptions = languageSelector.querySelector('.language-options');
+const languageItems = languageSelector.querySelectorAll('.language-options li');
+const chevronIcon = languageSelector.querySelector('.fa-chevron-down');
 
-function toggleDropdown() {
-    document.getElementById("language-dropdown").classList.toggle("show");
-}
+languageSelector.addEventListener('click', () => {
+  languageOptions.style.display = languageOptions.style.display === 'none' ? 'block' : 'none';
+  chevronIcon.classList.toggle('fa-chevron-up');
+});
 
-function setLanguage(lang) {
-    var googleTranslate = new google.translate.TranslateElement();
-    googleTranslate.translatePage(lang, 'fr'); // Traduire la page
-    toggleDropdown(); // Fermer le menu après la sélection
-}
-
-// Ferme le menu si l'utilisateur clique en dehors
-window.onclick = function(event) {
-    if (!event.target.matches('.language-selector')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
-
-// Charger le script Google Translate
-var googleScript = document.createElement('script');
-googleScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-document.body.appendChild(googleScript);
+languageItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const newLanguage = item.dataset.lang;
+    selectedLanguage.textContent = item.textContent;
+    // Mettez à jour la langue du site ici
+    console.log(`Changement de langue vers : ${newLanguage}`);
+    languageOptions.style.display = 'none';
+    chevronIcon.classList.remove('fa-chevron-up');
+  });
+});
 
 const slides = document.querySelector('.slides');
         let index = 0;
