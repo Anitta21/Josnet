@@ -23,7 +23,8 @@ body {
 }
 .language-selector {
     cursor: pointer;
-    font-size: 5px; 
+    font-size: 8px; 
+    margin-left: 10px;
 }
 .dropdown-content {
     display: none; /* Cacher par défaut */
@@ -35,10 +36,9 @@ body {
 
 .dropdown-content a {
     color: black;
-    padding: 5px 5px;
     text-decoration: none;
-    top: auto;
-    margin-top: 0px;
+    width: 1px;
+    /* top: 5px; */
 }
 
 .dropdown-content a:hover {
@@ -50,22 +50,20 @@ body {
 }
 
 .show {
-    display: block; /* Afficher le menu déroulant */
+    display:block;
+    font-size: 8px;
 }
 
-/* Masquer le message de Google Translate */
+
 body > .skiptranslate {
-    display: none !important; /* Cacher le message */
+    display: none !important;
 }
-
-/* Masquer la barre de traduction Google */
 body > .goog-te-banner-frame {
-    display: none !important; /* Cacher la barre */
+    display: none !important; 
 }
 
-/* Masquer la barre de langue source de Google */
 #goog-gt-vt {
-    display: none !important; /* Cacher la barre de langue source */
+    display: none !important;
 }
 .navbar .logo {
     display: flex;
@@ -109,6 +107,7 @@ body > .goog-te-banner-frame {
     padding: 10px;
     border-radius: 5px;
     z-index: 1;
+    font-size: 10px;
 }
 .menu-item:hover .sub-list {
     display: block; 
@@ -124,7 +123,7 @@ body > .goog-te-banner-frame {
 .slider {
     overflow: hidden;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 80px;
 }
 
 .slides {
@@ -148,11 +147,13 @@ img {
 }
 h1 {
     text-align: center;
-    color: #0072c6; 
+    color: #0072c6;
+    font-size: 20px;
 }
 h2 {
     color: #0072c6; 
     margin-top: 20px;
+    font-size: 16px;
 }
 h1,h2, h3, p{
     word-wrap: break-word;
@@ -165,12 +166,13 @@ p {
 }
 .link-button {
     display: inline-block;
-    padding: 8px 10px;
+    padding: 1px 3px;
     color: white;
     text-decoration: none;
     border-radius: 10px;
     background-color: #007bff;
     box-shadow: 0 2px 5px #007bff;
+    font-size: 10px;
 }
 
 .link-button:hover {
@@ -257,6 +259,7 @@ option{
 
 h3{
     color: hsl(205, 97%, 48%);
+    font-size: 13px;
 }
 
 footer {
@@ -362,12 +365,11 @@ padding-top: 5%;
 }
 @media (max-width: 480px) {
     .navbar{
-        padding: 5px 10px;
+        padding: 10px 15px;
     }
     .service, .training {
         width: calc(100% - 40px); /* Ajustement pour les petits écrans */
     }
-
     .navbar ul {
         align-items: center;
     }
@@ -377,14 +379,14 @@ padding-top: 5%;
     }
     footer{
         flex-direction: column;
-        padding: 8px;
+        padding: 10px;
     }
     .language-selector {
-        font-size: 3px; /* Réduire encore la taille de police */
+        font-size: 5px; 
     }
 
     .dropdown-content {
-        min-width: 8px; /* Réduire la largeur minimale du menu déroulant */
+        min-width: 5px; /* Réduire la largeur minimale du menu déroulant */
     }
 
     .dropdown-content a {
@@ -393,11 +395,11 @@ padding-top: 5%;
 }
 @media (max-width: 320px) {
     .language-selector {
-        font-size: 3px; /* Réduire la taille de police encore plus */
+        font-size: 5px; /* Réduire la taille de police encore plus */
     }
 
     .dropdown-content {
-        min-width: 3px; /* Réduire la largeur minimale du menu déroulant */
+        min-width: 10px; /* Réduire la largeur minimale du menu déroulant */
     }
 
     .dropdown-content a {
@@ -405,9 +407,6 @@ padding-top: 5%;
     }
     .navbar{
         padding: 5px 8px;
-    }
-    .service, .training {
-        width: calc(100% - 60px); /* Ajustement pour les petits écrans */
     }
         .navbar ul {
         align-items: center;
@@ -420,7 +419,6 @@ padding-top: 5%;
 
 /* .service */
 .container {
-    /* max-width: 1200px; */
     margin: auto;
     display: flex;
     flex-wrap: wrap;
