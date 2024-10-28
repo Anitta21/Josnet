@@ -11,13 +11,13 @@ body {
     justify-content: space-between;
     background-color: #ffffff;
     color: #007bff;
-   padding: 0px 0px;
+    padding: 10px 15px;
     position: fixed;
     top: 0;
-  max-width: 600%;
-   height: 25%;
+    width: 97%;
+   height: 15%;
     z-index: 2000;
-    border-radius: 50px;
+    border-radius: 0 0 20px 20px;
     border: 5px solid #007bff;
     box-shadow: 3px 3px 3px 3px #0072c6;
 }
@@ -29,32 +29,31 @@ color: #0072c6;
     display: flex;
 }
 .navbar img {
-    height: 150px;
-    width: 150px;
-    padding-left: 10%;
-    padding-top: 0%;
+    height: auto;
+    width: auto;
+    margin-top: 0px;
+    max-height: 50px;
+    margin-right: 10px;
 }
 
 .opening-hours {
-    margin-right: 20px;
-    font-size: 14px;
-    margin-top: 20px;
+    margin-right: 20%;
+    font-size: 10px;
 }
 
 .menu {
     display: flex; 
     justify-content: space-around;
     background-color: white;
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    margin-left: 0;
 }
 .menu-item {
-    position: relative;
     color: blue;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 8px;
+   margin: 5px;
 }
 .menu-item a {
     color: #007bff;
@@ -76,15 +75,14 @@ color: #0072c6;
     padding: 5px 10px;
     color: #007bff;
     text-decoration: none; 
-    display: block; 
 }
 .sub-item:hover {
     background-color: #e9ecef; 
 }
 .slider {
-    margin-top: 10%;
     overflow: hidden;
     width: 100%;
+    margin-top: 80px;
 }
 
 .slides {
@@ -114,6 +112,9 @@ h2 {
     color: #0072c6; 
     margin-top: 20px;
 }
+h1,h2, h3, p{
+    word-wrap: break-word;
+}
 p {
     line-height: 1.6;
    text-align: justify;
@@ -132,11 +133,9 @@ p {
     padding: 10px;
     margin: 2px;
     width: calc(30% - 40px);
-    margin-left: 1%;
-    margin-right: 1%;
 }
 .container {
-    max-width: 30%;
+    max-width: 40%;
     padding: 20px;
     background-color: white;
     align-items: center;
@@ -166,13 +165,11 @@ textarea, input, select {
     box-sizing: border-box;
     background-color: #fefefe;
     box-shadow: 0 2px 5px #007bff;
-    padding: 10px;
     border-radius: 5px;
     border: none;
 }
 button {
-    width: 40%;
-    padding: 10px;
+    width: 80%;
     margin-bottom: 10px;
     box-sizing: border-box;
     background-color: #007bff;
@@ -212,12 +209,14 @@ text-align: center;
     background-color:#0072c6;
     color: #ffffff;
     position: relative;
+    padding: 20px;
     justify-content: space-between;
     align-items: center;
     border-radius: 100% 100% 0% 0%;
     border: 5px solid #ffffff;
     box-shadow: 3px 0px 0px 3px #0072c6;
     display: block;
+    width: 95%;
 }
 .maps p {
     text-align: center;
@@ -228,14 +227,14 @@ color: hsl(119, 98%, 49%);
 
 }
 .left {
-padding-right: 60%;
+padding-right: 20%;
 padding-top: 5%;
 }
 .social-links {
     list-style-type: none;
     padding: 0;
-    gap: 20px; 
-    padding-left: 60%;
+    gap: 10px; 
+    padding-left: 30%;
     display: inline-flex;
   
 }
@@ -269,7 +268,8 @@ padding-top: 5%;
         .message {
             position: absolute;
             white-space: nowrap;
-            animation: slide 30s linear infinite; }
+            animation: slide 30s linear infinite; 
+        }
 
         @keyframes slide {
             0% {
@@ -282,30 +282,34 @@ padding-top: 5%;
 /* Styles Responsives */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+        flex-direction: row;
+        padding: 1px 1px;
+        font-size: 8px;
+        height: fit-content
     }
 
     .opening-hours {
         margin: 5px 0;
+        font-size: 8px;
     }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar ul li {
-        margin: 5px 0;
+    .menu{
+        flex-direction: row;
+        width: auto;
+        height: fit-content;
     }
 
     .service, .training {
-        width: calc(45% - 40px); /* Ajustement pour les écrans moyens */
+        width: calc(100% - 20px); /* Ajustement pour les écrans moyens */
+    }
+    .slide{
+        margin-top: 20px;
     }
 }
 
 @media (max-width: 480px) {
+    .navbar{
+        padding: 10px 15px;
+    }
     .service, .training {
         width: calc(100% - 40px); /* Ajustement pour les petits écrans */
     }
@@ -316,6 +320,10 @@ padding-top: 5%;
 
     .slider {
         margin-top: 60px; /* Ajustement pour la navbar fixe */
+    }
+    footer{
+        flex-direction: column;
+        padding: 10px;
     }
 }
 
