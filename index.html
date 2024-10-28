@@ -289,68 +289,83 @@
             </div>
         </div> </div>
 
-<div class="section" id="contactForm"><h1>Formulaire de Contact</h1></div>
-<form id="contact-form" onsubmit="envoyerMessage(); return false;">
-<div class="container"><a href="#container"></a>
-    <form id="contact-form">
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" required>
-
-        <label for="prenom">Prénom</label>
-        <input type="text" id="prenom" name="prenom" required>
-
-        <label for="adresse">Adresse</label>
-        <input type="text" id="adresse" name="adresse" required>
-        <label for="formation">Souhaiteriez-vous avoir un service en particulier?</label>
-        <select id="formation" name="formation">
-            <option value="">Type de formation</option>
-            <option value="Anglais">Anglais ( Niveau 1, Niveau 2, Niveau3)</option>
-            <option value="Admnistration système et réseau">Admnistration système et réseau</option>
-            <option value="Bureautique">Bureautique ( Word, Excel, PowerPoint, Internet)</option>
-            <option value="Cybersécurité">Cybersécurité</option>
-            <option value="Conception des sites Web">Conception des sites Web</option>
-            <option value="cablage réseau informatique">cablage réseau informatique</option>
-            <option value="informatique générale">informatique générale</option>
-            <option value="programmation web">programmation web ( Javascript, Django)</option>
-            <option value="Réseau informatique">Réseau informatique ( Débutant et Avancée)</option>
-            <option value="Video de surveillance">Video de surveillance (OCTV, CCTV )</option>
-            <option value="Web Design">Web Design ( HTML, Css, Javascript, Mysql, Python)</option>
-            <option value="Design photographique">Design photographique</option>
-        </select>
- <label for="service">Souhaiteriez-vous suivre une formation en particulier?</label>
-        <select id="service" name="service">
-            <option value="">Type de Service</option>
-            <option value="Acces Internet">Fournir accès internet</option>
-            <option value="Consultance">Consultance</option>
-            <option value="Vente en ligne des produits">Vente en ligne des produits</option>
-            <option value="Vente des services informatiques">Vente des services informatiques</option>
-            <option value="Conception des sites Web">Conception des sites Web(Site Web reactif, Sites E-commerce, Page de Redirection)</option>
-            <option value="Développement personnel et communautaire">Développement personnel et communautaire</option>
-            <option value="Réparations des équipement informatiques">Réparations des équipement informatiques</option>
-            <option value="Maintenance des systèmes informatiques">Maintenance des systèmes informatiques(installation des serveurs & postes de travail, montage & dépannage informatique)</option>
-            <option value="Sécurité bâtiment par caméra de surveillance">Sécurité bâtiment par caméra de surveillance</option>
-        </select>
-
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" ></textarea>
-
-        <label>Choisissez le mode de contact</label>
-        <div class="contact-options">
-            <div class="contact-option">
-                <input type="radio" id="whatsapp" name="contact-method" value="whatsapp" required>
-                <label for="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</label>
-            </div>
-            <div class="contact-option">
-                <input type="radio" id="email" name="contact-method" value="email" required>
-                <label for="email"><i class="fas fa-envelope"></i> Email</label>
-            </div>
+        <div class="section" id="contactForm">
+            <h1>Formulaire de Contact</h1>
         </div>
-
-        <button type="submit">Envoyer</button>
-    </form>
-</div>
-
+        <form id="contact-form" onsubmit="envoyerMessage(); return false;">
+            <div class="container">
+                <label for="nom"> Nom</label>
+                <input type="text" id="nom" name="nom" required>
+        
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+        
+                <label for="adresse">Adresse</label>
+                <input type="text" id="adresse" name="adresse" required>
+        
+                <label>Souhaiteriez-vous avoir un service ou une formation en particulier?</label>
+                <select id="type-selection" onchange="toggleServiceFormation()">
+                    <option value="">Choisissez une option entre service ou formation</option>
+                    <option value="formation">S'inscrire pour une Formation</option>
+                    <option value="service">Passer une demande d'un service</option>
+                </select>
+        
+                <div id="formation-container" style="display: none;">
+                    <label for="formation">Type de formation</label>
+                    <select id="formation" name="formation">
+                        <option value="">Sélectionnez une formation</option>
+                        <option value="Anglais">Anglais (Niveau 1, Niveau 2, Niveau 3)</option>
+                        <option value="Administration système et réseau">Administration système et réseau</option>
+                        <option value="Bureautique">Bureautique (Word, Excel, PowerPoint, Internet)</option>
+                        <option value="Cybersécurité">Cybersécurité</option>
+                        <option value="Conception des sites Web">Conception des sites Web</option>
+                        <option value="Câblage réseau informatique">Câblage réseau informatique</option>
+                        <option value="Informatique générale">Informatique générale</option>
+                        <option value="Programmation web">Programmation web (JavaScript, Django)</option>
+                        <option value="Réseau informatique">Réseau informatique (Débutant et Avancée)</option>
+                        <option value="Vidéo de surveillance">Vidéo de surveillance (OCTV, CCTV)</option>
+                        <option value="Web Design">Web Design (HTML, CSS, JavaScript, MySQL, Python)</option>
+                        <option value="Design photographique">Design photographique</option>
+                    </select>
+                </div>
+        
+                <div id="service-container" style="display: none;">
+                    <label for="service">Type de service</label>
+                    <select id="service" name="service">
+                        <option value="">Sélectionnez un service</option>
+                        <option value="Accès Internet">Fournir accès internet</option>
+                        <option value="Consultance">Consultance</option>
+                        <option value="Vente en ligne des produits">Vente en ligne des produits</option>
+                        <option value="Vente des services informatiques">Vente des services informatiques</option>
+                        <option value="Conception des sites Web">Conception des sites Web (Site Web réactif, Sites E-commerce, Page de Redirection)</option>
+                        <option value="Développement personnel et communautaire">Développement personnel et communautaire</option>
+                        <option value="Réparations des équipements informatiques">Réparations des équipements informatiques</option>
+                        <option value="Maintenance des systèmes informatiques">Maintenance des systèmes informatiques (installation des serveurs & postes de travail, montage & dépannage informatique)</option>
+                        <option value="Sécurité bâtiment par caméra de surveillance">Sécurité bâtiment par caméra de surveillance</option>
+                        <option value="Consultance">Studio de Production Musicale </option>
+                        <option value="Consultance">Photographie Professionnelle</option>
+                        <option value="Consultance">Production Vidéographie</option>
+                    </select>
+                </div>
+        
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+        
+                <label>Choisissez le mode de contact</label>
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <input type="radio" id="whatsapp" name="contact-method" value="whatsapp" required>
+                        <label for="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</label>
+                    </div>
+                    <div class="contact-option">
+                        <input type="radio" id="email" name="contact-method" value="email" required>
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    </div>
+                </div>
+        
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
     <footer><div class="left">&copy; 2023 Josnet. <br>Tous droits réservés.</div>
         <div class="maps"><p>Ville, Avenue de l'Amitié <br>
              Galerie K&G 1er étage <br>
