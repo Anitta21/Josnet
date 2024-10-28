@@ -23,6 +23,17 @@
             </strong>
             </div>
         </div>
+    <div class="language-selector" onclick="toggleDropdown()">
+            Français <span class="arrow">▼</span>
+        </div>
+        <div id="language-dropdown" class="dropdown-content">
+            <a href="#" onclick="setLanguage('en')">English</a>
+            <a href="#" onclick="setLanguage('es')">Español</a>
+            <a href="#" onclick="setLanguage('de')">Deutsch</a>
+            <a href="#" onclick="setLanguage('it')">Italiano</a>
+            <a href="#" onclick="setLanguage('sw')">Kiswahili</a>
+            <a href="#" onclick="setLanguage('rn')">Kirundi</a>
+        </div>
       <div id="google_translate_element"></div>
         <div class="menu">
             <div class="menu-item"><strong><a href="#Accueil">Accueil</a></strong></div>
@@ -38,6 +49,9 @@
                     <a class="sub-item" href="#reparation">Réparations des équipement informatiques </a>
                     <a class="sub-item" href="#maintenance">Maintenance des systèmes informatiques  </a>
                     <a class="sub-item" href="#cctv">Sécurité bâtiment par vidéo de surveillance </a>
+                    <a class="sub-item" href="#musicale">Studio de Production Musicale </a>
+                    <a class="sub-item" href="#professionnelle">Photographie Professionnelle </a>
+                    <a class="sub-item" href="#videographie">Production Vidéographie </a>
                 </div>
             </div>
             <div class="menu-item"><strong><a href="#trainings">Nos offres formations</a></strong>
@@ -80,10 +94,12 @@
             nous proposons des formations en informatique pour les étudiants, 
             ainsi que des services de photographie et de vidéographie pour capturer des moments précieux. <br>
             Notre plateforme en ligne permet également aux clients d'acheter une variété de produits de qualité. <br>
-            Pour rester en contact avec notre communauté,
-            Pour toute question ou demande, Pour plus d'infos n'hésitez pas à nous contacter par email à
+            <center><h3>POURQUOI NOUS CHOISIR?</h3></center>
+            <P> En choisissant JOSNET NETWORK AND SERVICES COMPANY LIMITED, vous bénéficiez
+                d'un accompagnement et d'un équipement de qualité et d'une équipe passionnée à tous que tu as besoin. <br>
+                Pour rester en contact avec notre communauté, pour toute question ou demande, pour plus d'infos n'hésitez pas à nous contacter par email à 
             <a href="mailto:infojosnetent@gmail.com" class="email">infojosnetent@gmail.com</i></a> </p></div> 
-
+        </P>
         <div class="section" id="services"><h1>Nos Services</h1></div>
         <div class="services">
             <div class="service" id="internet">
@@ -91,14 +107,13 @@
                  <img src="Josnet pictures/internet.jpeg" loading="lazy" alt="">
                 <center> <h4>WI-FI Hotspot</h4></center>
                 <p>Nous garantissons à nos clients un accès Internet rapide et fiable, en leur fournissant des solutions de connectivité 
-                adaptées à leurs besoins.
-                <a href="#contactForm" class="link-button">Demander</a></p> 
+                adaptées à leurs besoins. <a href="#contactForm" class="link-button">Demander</a></p> 
             </div> 
             <div class="service" id="consultance">
                 <h2><span>🛃</span>Consultance</h2>
                 <img src="Josnet pictures/consultance.jpg" loading="lazy" alt="">
                 <p>Notre équipe de consultants en informatique offre des conseils stratégiques pour aider nos
-                     clients à optimiser leurs infrastructures et à adopter les meilleures pratiques en matière de technologie
+                     clients à optimiser leurs infrastructures et à adopter les meilleures pratiques en matière de technologie.
                  <a href="#contactForm" class="link-button">Demander</a></p> 
             </div>
             <div class="service" id="produits">
@@ -112,8 +127,8 @@
                 <h2><span>🏪</span>Vente des services informatiques  </h2>
                 <img src="Josnet pictures/informatique.jpg" loading="lazy" alt="">
                 <p>En plus de nos produits, nous proposons une gamme de services informatiques personnalisés
-                    pour répondre aux besoins spécifiques de nos clients.</p>
-                 <a href="#contactForm" class="link-button">Demander</a>
+                    pour répondre aux besoins spécifiques de nos clients.
+                 <a href="#contactForm" class="link-button">Demander</a></p>
             </div>
             <div class="service" id="web">
                 <h2><span>💻</span>Conception des sites  Web</h2><br>
@@ -122,7 +137,7 @@
                 <ul>Sites E-commerce</ul>
                 <ul>Page de Redirection</ul></strong></center>
                 <p>Nous concevons des sites Web personnalisés pour nos clients, en mettant l'accent sur l'esthétique, la fonctionnalité 
-                et l'expérience utilisateur
+                et l'expérience utilisateur.
                  <a href="#contactForm" class="link-button">Demander</a></p> 
             </div>
             <div class="service" id="developement">
@@ -148,15 +163,47 @@
                     de nos clients pour garantir leur bon fonctionnement et leur sécurité à long terme.
                  <a href="#contactForm" class="link-button">Demander</a></p>
                 </div>
-            <div class="service" id="cctv">
-                <h2><span>🔒</span>Sécurité bâtiment par caméra de surveillance  </h2>
-                <img src="Josnet pictures/surveillance.webp" loading="lazy" alt="">
-                <center><strong><ul>Camera IP</ul>
-                <ul>Enregistreurs NVR</ul></strong></center>
-                <p>Nous disposons des programmes de formation sur mesure pour aider nos clients à développer leurs compétences en informatique, 
-                    qu'il s'agisse de logiciels spécifiques des solutions de connectivités adaptées à leurs besoins.
+                <div class="service" id="cctv">
+                    <h2><span>🔒</span>Sécurité bâtiment par caméra de surveillance  </h2>
+                    <img src="Josnet pictures/surveillance.webp" loading="lazy" alt="">
+                    <center><strong><ul>Camera IP</ul>
+                    <ul>Enregistreurs NVR</ul></strong></center>
+                    <p>Nous disposons des programmes de formation sur mesure pour aider nos clients à développer leurs compétences en informatique, 
+                        qu'il s'agisse de logiciels spécifiques des solutions de connectivités adaptées à leurs besoins.
+                     <a href="#contactForm" class="link-button">Demander</a></p>
+                </div>
+            <div class="service" id="musicale">
+                <h2><span>🎼</span>Studio de Production Musicale  </h2>
+                <img src="Josnet pictures/musical.webp" loading="lazy" alt="">
+            
+                <p>Notre studio de production musicale offre des services professionnels pour tous vos projets audio.
+                     Que vous soyez un artiste émergent ou confirmé, nous disposons d’un équipement de haute qualité et d’une équipe d'ingénieurs du son expérimentés 
+                     pour vous accompagner dans chaque étape de la production. De l'enregistrement au mixage et au mastering, notre objectif est de vous fournir un son unique et 
+                     de haute qualité.
+
                  <a href="#contactForm" class="link-button">Demander</a></p>
         </div>
+        <div class="service" id="professionnelle">
+            <h2><span>🎥</span>Photographie Professionnelle  </h2>
+            <img src="Josnet pictures/photographie.jpg" loading="lazy" alt="">
+            <p>Nos services de photographie professionnelle capturent les moments qui comptent pour vous, que ce soit pour des événements, 
+                des portraits, ou des projets commerciaux. Nous mettons à votre disposition un studio équipé avec des technologies avancées et des photographes talentueux 
+                qui sauront transformer chaque instant en une image mémorable. JOSNET s’engage à offrir des photos de haute résolution, parfaitement adaptées à vos besoins
+                 personnels ou commerciaux.
+
+             <a href="#contactForm" class="link-button">Demander</a></p>
+    </div>
+    <div class="service" id="Videographie">
+        <h2><span>🎬</span>Production Vidéographie </h2>
+        <img src="Josnet pictures/videographie.jpg" loading="lazy" alt="">
+        <p>Notre service de production vidéographique vous aide à raconter votre histoire en images avec un rendu professionnel. 
+            Nous proposons une gamme de services, incluant la réalisation de clips musicaux, de vidéos d’entreprise, 
+            et de documentaires. Grâce à notre équipe de vidéastes expérimentés et à notre matériel de pointe, nous vous garantissons des vidéos de haute qualité, 
+            adaptées pour les réseaux sociaux, la télévision, ou tout autre besoin de diffusion.
+
+         <a href="#contactForm" class="link-button">Demander</a></p>
+</div>
+
             </div>
         <div class="section" id="trainings"><h1>Nos Formations</h1></div>
         <div class="trainings">
@@ -212,7 +259,7 @@
                 <ul>Intermediate</ul>
                 <ul>Advanced</ul>
                 <ul>English for specific purposes</ul></strong></center>
-                <p>Pour l’apprentissage de la langue anglaise, notre société est à votre service pour vous apprendre l’anglais facilement
+                <p>Pour l’apprentissage de la langue anglaise, notre société est à votre service pour vous apprendre l’anglais facilement.
                  <a href="#contactForm" class="link-button">S'inscrire</a></p>
             </div>
             <div class="training" id="cyber">
@@ -227,7 +274,7 @@
                 <h2><span>🎞</span>Video Surveillance</h2>
                 <img src="Josnet pictures/cctv.jpg" loading="lazy" alt="">
                 <p>Nous vous proposons un servive vous permettant d'acquierir des compétences techniques essentielles pour mettre en place
-                    un système de video-surveillance
+                    un système de video-surveillance.
                  <a href="#contactForm" class="link-button">S'inscrire</a></p>
             </div>
             <div class="training" id="photo">
@@ -254,7 +301,7 @@
 
         <label for="adresse">Adresse</label>
         <input type="text" id="adresse" name="adresse" required>
-        <label for="formation">Souhaiteriez-vous avoir une service en particulier?</label>
+        <label for="formation">Souhaiteriez-vous avoir un service en particulier?</label>
         <select id="formation" name="formation">
             <option value="">Type de formation</option>
             <option value="Anglais">Anglais ( Niveau 1, Niveau 2, Niveau3)</option>
@@ -271,7 +318,7 @@
             <option value="Design photographique">Design photographique</option>
         </select>
  <label for="service">Souhaiteriez-vous suivre une formation en particulier?</label>
-        <select id="service" name="formation">
+        <select id="service" name="service">
             <option value="">Type de Service</option>
             <option value="Acces Internet">Fournir accès internet</option>
             <option value="Consultance">Consultance</option>
