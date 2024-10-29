@@ -317,11 +317,11 @@ padding-top: 5%;
 /* Styles Responsives */
 @media (min-width: 320px) and (max-width: 600px) {
     .navbar {
-        padding: 0,2rem; /* Réduire le padding */
+        padding: 0,2rem;
     }
 
     .language-selector {
-        font-size: 0.5rem; /* Réduire la taille de la police */
+        font-size: 0.5rem; 
     }
 }
 @media (max-width: 768px) {
@@ -376,45 +376,7 @@ padding-top: 5%;
     .page-title {
         margin: 0;
     }
-    
-    .language-selector {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-    }
-    
-    .language-selector .selected-language {
-        display: inline-block;
-        margin-right: 5px;
-    }
-    
-    .language-selector .fa-chevron-down {
-        font-size: 12px;
-    }
-    
-    .language-selector .language-options {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-        min-width: 100px;
-        padding: 10px 0;
-        background-color: #333;
-        border: 1px solid #ccc;
-        list-style-type: none;
-        display: none;
-    }
-    
-    .language-selector .language-options li {
-        padding: 5px 10px;
-        cursor: pointer;
-        color: #fff;
-    }
-    
-    .language-selector .language-options li:hover {
-        background-color: #555;
-    }
-    
+        
     .content {
         padding: 20px;
     }
