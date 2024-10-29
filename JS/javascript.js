@@ -1,37 +1,3 @@
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'fr',
-        includedLanguages: 'fr,en,es,sw,rn,zh,ru,tr,ar,pt,la',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-
-    const translateElement = new google.translate.TranslateElement();
-    translateElement.onchange = function() {
-        updatePageContent(translateElement.getLanguage());
-    };
-
-    // Initialiser la page avec la langue par défaut
-    updatePageContent('fr');
-}
-
-function updatePageContent(lang) {
-    const contentElements = document.querySelectorAll('[data-translate-text]');
-
-    contentElements.forEach(element => {
-        const originalText = element.textContent;
-        const translatedText = translateText(originalText, lang);
-        element.textContent = translatedText;
-    });
-
-    // Mettre à jour la langue du document
-    document.documentElement.lang = lang;
-}
-
-function translateText(text, targetLang) {
-    const translateElement = new google.translate.TranslateElement();
-    return translateElement.translateText(text, 'fr', targetLang);
-}
-
 const languageSelector = document.querySelector('.language-selector');
 const languageOptions = languageSelector.querySelector('.language-options');
 const selectedLanguage = languageSelector.querySelector('.selected-language');
@@ -43,13 +9,16 @@ languageSelector.addEventListener('click', () => {
 languageOptions.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', () => {
         const lang = item.dataset.lang;
+        const url = item.dataset.url.replace('Votre%20texte%20ici', encodeURIComponent(document.body.innerText));
+
+        // Changer la langue affichée
         selectedLanguage.textContent = item.textContent;
 
         // Fermer le sélecteur
         languageOptions.style.display = 'none';
 
-        // Déclencher la traduction
-        updatePageContent(lang);
+        // Ouvrir Google Translate avec le texte
+        window.open(url, '_blank');
     });
 });
 const slides = document.querySelector('.slides');
