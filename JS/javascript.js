@@ -9,7 +9,6 @@ function googleTranslateElementInit() {
 const languageSelector = document.querySelector('.language-selector');
 const languageOptions = languageSelector.querySelector('.language-options');
 const selectedLanguage = languageSelector.querySelector('.selected-language');
-const content = document.querySelector('.content');
 
 languageSelector.addEventListener('click', () => {
     languageOptions.style.display = languageOptions.style.display === 'none' ? 'block' : 'none';
@@ -22,11 +21,19 @@ languageOptions.querySelectorAll('li').forEach(item => {
         translateElement.setEnabled(true);
         translateElement.setLanguage(lang);
         selectedLanguage.textContent = item.textContent;
-        content.textContent = translateElement.translatePage();
+
+        // Fermer le sélecteur
         languageOptions.style.display = 'none';
+
+        // Déclencher la traduction
+        const iframe = document.querySelector('.skiptranslate');
+        if (iframe) {
+            const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const body = innerDoc.body;
+            body.setAttribute('lang', lang); // Changer la langue
+        }
     });
 });
-
 const slides = document.querySelector('.slides');
         let index = 0;
 
