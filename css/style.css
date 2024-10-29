@@ -29,11 +29,10 @@ body {
 }
 
 .language-selector .selected-language {
-    padding: 2px 3px; 
-    background-color:#ffffff;
-    border-radius: 2px;
+    background-color:#baf2f3;
     min-width: 100px;
     text-align: center; 
+    font-size: 5px;
 }
 
 .language-selector .fas {
