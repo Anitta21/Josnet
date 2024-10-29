@@ -23,8 +23,6 @@ body {
 }
 .language-selector {
     position: absolute; 
-    right: 8px; 
-    top: 5px; 
     cursor: pointer;
     color: #007bff;
     font-size: 5px; 
@@ -39,12 +37,10 @@ body {
 }
 
 .language-selector .fas {
-    margin-left: 3px;
     color: #007bff;
 }
 
-#google_translate_element {
-    margin-top: 5px; 
+#google_translate_element { 
     font-size: 5px;
 }
 .navbar .logo {
