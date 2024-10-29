@@ -7,8 +7,8 @@
     <meta name="google" content="notranslate">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <title>Site Web Professionnel</title>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <title>Site Web Professionnel</title>
 </head>
 <body>
     <div class="navbar">
@@ -24,22 +24,21 @@
             </div>
         </div>
         <div class="header-content">
-            <div class="language-selector">
-                <span class="selected-language">Français</span>
-                <i class="fas fa-chevron-down"></i>
-                <ul class="language-options" style="display: none;">
-                    <li data-lang="fr" data-url="https://translate.google.com/?sl=fr&tl=fr&text=">Français</li>
-                    <li data-lang="en" data-url="https://translate.google.com/?sl=fr&tl=en&text=">English</li>
-                    <li data-lang="sw" data-url="https://translate.google.com/?sl=fr&tl=sw&text=">Kiswahili</li>
-                    <li data-lang="rn" data-url="https://translate.google.com/?sl=fr&tl=rn&text=">Kirundi</li>
-                    <li data-lang="ar" data-url="https://translate.google.com/?sl=fr&tl=ar&text=">العربية</li>
-                </ul>
-            </div>
+        <div class="language-selector">
+            <span class="selected-language">Langue</span>
+            <i class="fas fa-chevron-down"></i>
+            <div id="google_translate_element"></div>
         </div>
-        
-        <div id="translator-iframe">
-            <iframe id="translate-frame" src="https://translate.google.com/?sl=fr&tl=fr&text=" width="100%" height="300px" style="border:none;"></iframe>
-        </div>
+    </div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr', // Langue par défaut
+                includedLanguages: 'en,sw,rn,ar', // Langues disponibles
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
 
         <div class="menu">
             <div class="menu-item"><strong><a href="#Accueil">Accueil</a></strong></div>
