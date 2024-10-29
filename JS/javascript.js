@@ -1,6 +1,7 @@
 const languageSelector = document.querySelector('.language-selector');
 const languageOptions = languageSelector.querySelector('.language-options');
 const selectedLanguage = languageSelector.querySelector('.selected-language');
+const translateFrame = document.getElementById('translate-frame');
 
 languageSelector.addEventListener('click', () => {
     languageOptions.style.display = languageOptions.style.display === 'none' ? 'block' : 'none';
@@ -9,7 +10,7 @@ languageSelector.addEventListener('click', () => {
 languageOptions.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', () => {
         const lang = item.dataset.lang;
-        const url = item.dataset.url.replace('Votre%20texte%20ici', encodeURIComponent(document.body.innerText));
+        const url = item.dataset.url + encodeURIComponent(document.body.innerText);
 
         // Changer la langue affichée
         selectedLanguage.textContent = item.textContent;
@@ -17,8 +18,8 @@ languageOptions.querySelectorAll('li').forEach(item => {
         // Fermer le sélecteur
         languageOptions.style.display = 'none';
 
-        // Ouvrir Google Translate avec le texte
-        window.open(url, '_blank');
+        // Mettre à jour l'iframe avec la traduction
+        translateFrame.src = url;
     });
 });
 const slides = document.querySelector('.slides');
