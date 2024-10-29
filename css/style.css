@@ -22,30 +22,30 @@ body {
     box-shadow: 3px 3px 3px 3px #0072c6;
 }
 .language-selector {
-    position: absolute; /* Position absolue pour éviter de déplacer les autres éléments */
-    right: 20px; /* Ajustez la distance du bord droit */
-    top: 10px; /* Ajustez la position verticale */
+    position: absolute; 
+    right: 8px; 
+    top: 5px; 
     cursor: pointer;
-    color: #fff;
-    font-size: 14px; /* Taille de police réduite */
+    color: #007bff;
+    font-size: 5px; 
 }
 
 .language-selector .selected-language {
-    padding: 5px 8px; /* Réduire les marges */
-    background-color: #444;
-    border-radius: 3px;
-    min-width: 100px; /* Largeur minimale pour le sélecteur */
-    text-align: center; /* Centrer le texte */
+    padding: 2px 3px; 
+    background-color:#ffffff;
+    border-radius: 2px;
+    min-width: 100px;
+    text-align: center; 
 }
 
 .language-selector .fas {
-    margin-left: 5px;
-    color: #fff;
+    margin-left: 3px;
+    color: #007bff;
 }
 
 #google_translate_element {
-    margin-top: 10px; /* Espace au-dessus du sélecteur */
-    font-size: 12px; /* Taille de police réduite pour le widget */
+    margin-top: 5px; 
+    font-size: 5px;
 }
 .navbar .logo {
     display: flex;
