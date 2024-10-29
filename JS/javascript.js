@@ -9,6 +9,9 @@ function googleTranslateElementInit() {
     translateElement.onchange = function() {
         updatePageContent(translateElement.getLanguage());
     };
+
+    // Initialiser la page avec la langue par défaut
+    updatePageContent('fr');
 }
 
 function updatePageContent(lang) {
@@ -19,6 +22,9 @@ function updatePageContent(lang) {
         const translatedText = translateText(originalText, lang);
         element.textContent = translatedText;
     });
+
+    // Mettre à jour la langue du document
+    document.documentElement.lang = lang;
 }
 
 function translateText(text, targetLang) {
