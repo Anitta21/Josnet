@@ -4,6 +4,26 @@ function googleTranslateElementInit() {
         includedLanguages: 'fr,en,es,sw,rn,zh,ru,tr,ar,pt,la',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
+
+    const translateElement = new google.translate.TranslateElement();
+    translateElement.onchange = function() {
+        updatePageContent(translateElement.getLanguage());
+    };
+}
+
+function updatePageContent(lang) {
+    const contentElements = document.querySelectorAll('[data-translate-text]');
+
+    contentElements.forEach(element => {
+        const originalText = element.textContent;
+        const translatedText = translateText(originalText, lang);
+        element.textContent = translatedText;
+    });
+}
+
+function translateText(text, targetLang) {
+    const translateElement = new google.translate.TranslateElement();
+    return translateElement.translateText(text, 'fr', targetLang);
 }
 
 const languageSelector = document.querySelector('.language-selector');
@@ -17,21 +37,13 @@ languageSelector.addEventListener('click', () => {
 languageOptions.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', () => {
         const lang = item.dataset.lang;
-        const translateElement = new google.translate.TranslateElement();
-        translateElement.setEnabled(true);
-        translateElement.setLanguage(lang);
         selectedLanguage.textContent = item.textContent;
 
         // Fermer le sélecteur
         languageOptions.style.display = 'none';
 
         // Déclencher la traduction
-        const iframe = document.querySelector('.skiptranslate');
-        if (iframe) {
-            const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-            const body = innerDoc.body;
-            body.setAttribute('lang', lang); // Changer la langue
-        }
+        updatePageContent(lang);
     });
 });
 const slides = document.querySelector('.slides');
