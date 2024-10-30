@@ -319,6 +319,7 @@ padding-top: 5%;
 @media (min-width: 320px) and (max-width: 600px) {
     .navbar {
         padding: 0.2rem;
+        flex-wrap: wrap;
     }
 
     .language-selector {
@@ -350,6 +351,12 @@ padding-top: 5%;
 
     .navbar ul {
         align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin: 5px;
     }
 
     .slider {
@@ -379,10 +386,6 @@ padding-top: 5%;
         padding: 5px 8px;
     }
 
-    .navbar ul {
-        align-items: center;
-    }
-
     .slider {
         margin-top: 80px; /* Ajustement pour la navbar fixe */
     }
@@ -394,6 +397,7 @@ padding-top: 5%;
         padding: 1px 1px;
         font-size: 8px;
         height: fit-content;
+        flex-wrap: wrap;
     }
 
     .opening-hours {
@@ -403,8 +407,13 @@ padding-top: 5%;
 
     .menu {
         flex-direction: row;
-        width: auto;
+        width: 100%;
         height: fit-content;
+        justify-content: center;
+    }
+
+    .menu li {
+        margin: 5px;
     }
 
     .service, .training {
