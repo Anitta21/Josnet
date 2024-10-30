@@ -357,21 +357,14 @@ footer {
         cursor: pointer;
         color: #007bff;
     }
-
-    .language-selector .selected-language {
-        background-color:#ffffff;
-        min-width: 100px;
-        text-align: center; 
-        font-size: 0.5rem;
-    }
-
     .language-selector .fas {
         color: #007bff;
     }
 
-    #google_translate_element { 
-        font-size: 0.5rem;
-        padding-left: 20px;
+    .language-selector,
+    #google_translate_element {
+        margin-right: 0;
+        margin-top: 10px;
     }
 
     .service, .training {
