@@ -21,12 +21,6 @@ body {
     border: 5px solid #007bff;
     box-shadow: 3px 3px 3px 3px #0072c6;
 }
-.header-content{
-    padding-left: 20px;
-    font-size: 10px;
-    color: #0072c6;
-}
-
 .language-selector {
     position: absolute; 
     cursor: pointer;
