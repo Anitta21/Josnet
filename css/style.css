@@ -22,7 +22,7 @@ body {
     box-shadow: 3px 3px 3px 3px #0072c6;
 }
 .language-selector {
-    position: absolute; 
+    position: relative; 
     cursor: pointer;
     color: #007bff;
     font-size: 5px; 
