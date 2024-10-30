@@ -41,6 +41,7 @@ body {
 
 #google_translate_element { 
     font-size: 5px;
+    padding-left: 2px;
 }
 .navbar .logo {
     display: flex;
