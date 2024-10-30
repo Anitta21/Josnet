@@ -15,12 +15,13 @@ body {
     position: fixed;
     top: 0;
     width: 97%;
-   height: 15%;
+    height: 15%;
     z-index: 2000;
     border-radius: 0 0 20px 20px;
     border: 5px solid #007bff;
     box-shadow: 3px 3px 3px 3px #0072c6;
 }
+
 .language-selector {
     position: absolute; 
     cursor: pointer;
@@ -43,9 +44,11 @@ body {
     font-size: 5px;
     padding-left: 2px;
 }
+
 .navbar .logo {
     display: flex;
 }
+
 .navbar img {
     height: auto;
     width: auto;
@@ -66,20 +69,23 @@ body {
     flex-wrap: wrap;
     margin-left: 0;
 }
+
 .menu-item {
     color: blue;
     text-decoration: none;
     font-weight: bold;
     padding: 8px;
-   margin: 5px;
+    margin: 5px;
 }
+
 .menu-item a {
     color: #007bff;
     text-decoration: none;
 }
+
 .sub-list {
     display: none;
-   position: absolute;
+    position: absolute;
     background-color: #d2d1d1;
     box-shadow: 0 2px 5px #007bff;
     padding: 10px;
@@ -87,17 +93,21 @@ body {
     z-index: 1;
     font-size: 10px;
 }
+
 .menu-item:hover .sub-list {
     display: block; 
 }
+
 .sub-item {
     padding: 5px 10px;
     color: #007bff;
     text-decoration: none; 
 }
+
 .sub-item:hover {
     background-color: #e9ecef; 
 }
+
 .slider {
     overflow: hidden;
     width: 100%;
@@ -105,8 +115,8 @@ body {
 }
 
 .slides {
-   display: flex;
-   transition: 0.5s ease;
+    display: flex;
+    transition: 0.5s ease;
     width: 100%;
 }
 
@@ -123,25 +133,30 @@ img {
 .section {
     text-align: center;
 }
+
 h1 {
     text-align: center;
     color: #0072c6;
     font-size: 20px;
 }
+
 h2 {
     color: #0072c6; 
     margin-top: 20px;
     font-size: 16px;
 }
+
 h1,h2, h3, p{
     word-wrap: break-word;
 }
+
 p {
     line-height: 1.6;
-   text-align: justify;
-   padding-left: 15px;
-   padding-right: 15px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
 }
+
 .link-button {
     display: inline-block;
     padding: 1px 3px;
@@ -156,6 +171,7 @@ p {
 .link-button:hover {
     background-color: #005fa3;
 }
+
 .services, .trainings {
     display: flex;
     flex-wrap: wrap;
@@ -169,19 +185,21 @@ p {
     margin: 2px;
     width: calc(30% - 40px);
 }
+
 .container {
     max-width: 40%;
     padding: 20px;
     background-color: white;
     align-items: center;
-  
 }
+
 form {
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 100%;
 }
+
 label {
     width: 80%;
     padding: 10px;
@@ -191,8 +209,9 @@ label {
     box-sizing: border-box;
     border: none;
     text-align: center;
-   color: #0072c6;
+    color: #0072c6;
 }
+
 textarea, input, select {
     width: 100%;
     padding: 10px;
@@ -203,8 +222,9 @@ textarea, input, select {
     border-radius: 5px;
     border: none;
 }
+
 button {
-   display: inline-block;
+    display: inline-block;
     padding: 10px 15px;
     margin-top: 10px;
     color: white;
@@ -215,24 +235,27 @@ button {
     border: none;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #19d235;
 }
+
 .contact-options {
     display: flex;
     justify-content: space-around;
     border: none;
 }
+
 option{
     background-color: #d2d1d1;
     box-shadow: 0 2px 5px #007bff;
     padding: 10px;
     border-radius: 5px;
 }
+
 .contact-option {
     display: flex;
     align-items: center;
-    
 }
 
 h3{
@@ -241,7 +264,7 @@ h3{
 }
 
 footer {
-text-align: center;
+    text-align: center;
     background-color:#0072c6;
     color: #ffffff;
     position: relative;
@@ -254,26 +277,29 @@ text-align: center;
     display: block;
     width: 95%;
 }
+
 .maps p {
     text-align: center;
 }
-.maps a {
-text-decoration: none;
-color: hsl(119, 98%, 49%);
 
+.maps a {
+    text-decoration: none;
+    color: hsl(119, 98%, 49%);
 }
+
 .left {
-padding-right: 20%;
-padding-top: 5%;
+    padding-right: 20%;
+    padding-top: 5%;
 }
+
 .social-links {
     list-style-type: none;
     padding: 0;
     gap: 10px; 
     padding-left: 30%;
     display: inline-flex;
-  
 }
+
 .social-links a {
     text-decoration: none;
     padding: 10px;
@@ -283,6 +309,7 @@ padding-top: 5%;
     height: 40px;
     justify-content: center;
 }
+
 .facebook { background-color: rgb(241, 247, 250); }
 .instagram { background-color: #e1306c; }
 .linkedin { background-color: rgb(241, 247, 250); }
@@ -290,31 +317,34 @@ padding-top: 5%;
     text-decoration: none;
     color: white;
 }
+
 .social-links a:hover {
     opacity: 0.5;
 }
-        .welcome-message {
-            color: white;
-            padding: 1px;
-            position: relative;
-            overflow: hidden;
-            height: 50px; 
-        }
 
-        .message {
-            position: absolute;
-            white-space: nowrap;
-            animation: slide 30s linear infinite; 
-        }
+.welcome-message {
+    color: white;
+    padding: 1px;
+    position: relative;
+    overflow: hidden;
+    height: 50px; 
+}
 
-        @keyframes slide {
-            0% {
-                transform: translateX(100%); 
-            }
-            100% {
-                transform: translateX(-100%); 
-            }
-        }
+.message {
+    position: absolute;
+    white-space: nowrap;
+    animation: slide 30s linear infinite; 
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
 /* Styles Responsifs */
 @media (min-width: 320px) and (max-width: 600px) {
     .navbar {
