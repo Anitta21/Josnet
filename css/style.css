@@ -422,53 +422,24 @@ footer {
 }
 
 @media (max-width: 768px) {
-    @media (max-width: 767px) {
     .navbar {
-        flex-direction: column;
-        align-items: center; /* Centrer les éléments */
-        height: 20px;
-        padding: 10px;
-    }
-
-    .language-selector {
-        font-size: 0.2rem; 
-        cursor: pointer;
-        color: #007bff;
-        margin: 5px 0; 
-    }
-
-    .language-selector .selected-language {
-        background-color: #ffffff;
-        min-width: 100px;
-        text-align: center; 
-        font-size: 0.2rem;
-    }
-
-    .language-selector .fas {
-        color: #007bff;
-    }
-
-    #google_translate_element { 
-        font-size: 0.2rem;
-        padding-left: 2px;
-        margin: 5px 0;
+        flex-direction: row;
+        padding: 1px 1px;
+        font-size: 8px;
+        height: fit-content;
+        flex-wrap: wrap;
     }
 
     .opening-hours {
-        margin-right: 0;
-        margin-top: 2px;
+        margin: 5px 0;
         font-size: 8px;
-        text-align: center;
     }
-    .navbar img {
-        max-height: 20px; 
-}
+
     .menu {
         flex-direction: row;
         width: 100%;
         height: fit-content;
         justify-content: center;
-        font-size: 8px;
     }
 
     .menu li {
@@ -513,4 +484,4 @@ h1, h2 {
 
 p {
     line-height: 1.6;
-}}
+}
