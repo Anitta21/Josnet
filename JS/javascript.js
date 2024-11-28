@@ -1,3 +1,22 @@
+const slides = document.querySelector('.slides');
+        let index = 0;
+
+        function showSlide() {
+            const totalSlides = 3; 
+            index = (index + 1) % totalSlides;
+            const offset = -index * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(showSlide, 3000); 
+        function toggleSubList(id) {
+            const subList = document.getElementById(id);
+            if (subList.style.display === "block") {
+                subList.style.display = "none"; 
+            } else {
+                subList.style.display = "block"; 
+            }
+        }
 const languageSelector = document.querySelector('.language-selector');
 const languageOptions = languageSelector.querySelector('.language-options');
 const selectedLanguage = languageSelector.querySelector('.selected-language');
@@ -22,25 +41,6 @@ languageOptions.querySelectorAll('li').forEach(item => {
         translateFrame.src = url;
     });
 });
-const slides = document.querySelector('.slides');
-        let index = 0;
-
-        function showSlide() {
-            const totalSlides = 3; 
-            index = (index + 1) % totalSlides;
-            const offset = -index * 100;
-            slides.style.transform = `translateX(${offset}%)`;
-        }
-
-        setInterval(showSlide, 3000); 
-        function toggleSubList(id) {
-            const subList = document.getElementById(id);
-            if (subList.style.display === "block") {
-                subList.style.display = "none"; 
-            } else {
-                subList.style.display = "block"; 
-            }
-        }
         function toggleServiceFormation() {
             const typeSelection = document.getElementById('type-selection').value;
             const formationContainer = document.getElementById('formation-container');
@@ -93,29 +93,3 @@ const slides = document.querySelector('.slides');
         window.open(whatsappLink, '_blank');
     }
 }
-        
-        let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let i;
-    const slides = document.getElementsByClassName("mySlides");
-    const dots = document.getElementsByClassName("dot");
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[slideIndex - 1].style.display = "block";  
-    dots[slideIndex - 1].className += " active";
-
-    setTimeout(showSlides, 3000);
-}
-        
